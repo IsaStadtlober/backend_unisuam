@@ -7,6 +7,8 @@
 }
 
 
+/*Estilizando o cabeçalho(header) da página*/
+
 body {
     background-color: #ffffff;
 }
@@ -62,13 +64,44 @@ a:hover::after {
     width: 100%; /* Expande a linha ao passar o mouse */
 }
 
+/*Carrosel Indicadores*/
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(0, 0, 0, 0.452); /* Define a cor preta como fundo dos indicadores */
+    border-top: 0; /* Remove a borda superior dos indicadores */
+    border-bottom: 0; /* Remove a borda inferior dos indicadores */
+    width: 6px; /* Define a largura fixa dos indicadores */
+    height: 6px; /* Define a altura fixa dos indicadores */
+    margin-left: 5px;
+}
+
+.carousel-indicators {
+    position: relative; /* Garante que o posicionamento seja baseado no fluxo normal da página */
+    display: flex; /* Exibe os botões lado a lado */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 40px; /* Espaçamento acima dos botões */
+}
+  
+  .carousel-indicators button {
+    width: 12px; /* Tamanho do indicador */
+    height: 12px;
+    margin: 0 5px; /* Espaçamento entre os botões */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor padrão */
+    border: none; /* Remove bordas */
+    border-radius: 50%; /* Formato circular */
+}
+  
+  .carousel-indicators button.active {
+    background-color: #000; /* Cor do botão ativo */
+}
+  
+
+/*Estilizando o corpo(main) da página*/
+
 /* Ajuste da imagem do carrossel */
 .carousel-inner img {
-    padding-top: 40px;/*Espaçamento de encima da imagem*/
-    padding-right: 13px;/*Espaçamento no lado direito*/
+    padding: 10px 2px 0px 0px;/*Espaçamento de encima e a direita da imagem*/
     max-width: 1000px; /* Tamanho máximo da imagem */
-    max-height: 400px;/*Altura máxima da imagem*/
-    width: 100%; /* Responsividade */
     margin: auto; /* Centralização */
 }
   
@@ -83,11 +116,11 @@ a:hover::after {
 }
   
 .carousel-control-prev {
-    left: calc((100% - 980px) / 2); /* Alinha com a borda da imagem */
+    left: calc((100% - 1000px) / 2); /* Alinha com a borda da imagem */
 }
   
 .carousel-control-next {
-    right: calc((100% - 980px) / 2); /* Alinha com a borda da imagem */
+    right: calc((100% - 1000px) / 2); /* Alinha com a borda da imagem */
 }
   
 /* Ajuste das setas em telas menores */
@@ -100,15 +133,52 @@ a:hover::after {
       right: 10px; /* Mantém visível em telas pequenas */
     }
 }
-  
-/* Estilo das legendas */
 
+
+/* Estilo das legendas */
 .carousel-caption {
     display: block; /* Garante visibilidade */
+    text-align: left; /* Alinhamento à esquerda */
     font-size: 1rem; /* Tamanho padrão */
-    padding: 10px; /* Espaçamento interno */
+    font-family: "Roboto Flex", sans-serif;
+    padding-left: 24px; /* Espaçamento interno */
+    bottom: 10px; /* Reposiciona abaixo */
+    left: 15%; /* Alinha mais à esquerda */
+    width: 90%; /* Evita ultrapassar os limites */
 }
-  
+
+h5{
+    font-size: 1.5em;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+strong{
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+p{
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.especificacoes{
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 600;
+    padding-left: 3px;
+    color: #ffffff;
+}
+
+.especificacoes:hover{
+    color: #d4d2d2;
+    text-decoration-color: #d4d2d2;
+}
+
 /* Ajuste das legendas em telas menores */
 @media (max-width: 700px) {
     .carousel-caption {
@@ -117,7 +187,21 @@ a:hover::after {
       left: 5%; /* Alinha mais à esquerda */
       width: 90%; /* Evita ultrapassar os limites */
     }
+
+    h5{
+        font-family: "Roboto Flex", sans-serif;
+        font-size: 1.2em;
+    }
 }
-  
-  
-  
+
+@media (max-width: 600px) {
+    .carousel-caption {
+      font-size: 0.6rem; /* Reduz tamanho do texto */
+      bottom: 10px; /* Reposiciona abaixo */
+    }
+
+    h5{
+        font-family: "Roboto Flex", sans-serif;
+        font-size: 1em;
+    }
+}
