@@ -62,7 +62,8 @@ a:hover::after {
     position: relative;
     display: flex; /* Indicadores alinhados em linha */
     justify-content: center; /* Centralização horizontal */
-    margin-top: 40px; /* Espaçamento acima */
+    margin-top: 35px; /* Espaçamento acima */
+    margin-bottom: 25px; /* Espaçamento abaixo */
 }
 
 .carousel-indicators [data-bs-target] {
@@ -82,8 +83,8 @@ a:hover::after {
 
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1000px; /* Largura máxima */
-    margin: 0 auto; /* Centraliza o carrossel */
+    max-width: 1150px; /* Largura máxima */
+    margin: auto; /* Centraliza o carrossel */
 }
 
 /*Centralizando telas menores*/
@@ -187,3 +188,71 @@ p {
 }
 }
 
+/* SESSÂO 2 */
+
+/* Imagens */
+.img-fluid {
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin-top: 20px; /* Espaçamento acima */
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
+  }
+
+/*Fonte parágrafo*/
+.mt-3{
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-weight: normal; /* Peso da fonte */
+    font-size: 1em; /* Tamanho da fonte */
+}
+
+/*  Fonte do Botão */
+.btn-sm{
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-weight: 600; /* Peso da fonte */
+    font-size: 1em;/* Tamanho da fonte */
+}
+
+/*  Propriedades do Botão */
+.btn-secondary {
+    box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
+}
+
+/* Linha vertical padrão */
+.border-divider1,
+.border-divider2,
+.border-divider3 {
+    border-right: 1px solid black; /* Linha vertical */
+    height: 240px; /* Altura fixa para a linha */
+}
+  
+/* Oculta 1 linha vertical em telas menores */
+ @media (max-width: 1200px) {
+    .border-divider2 {
+        border-right: none; /* Remove as linhas verticais */
+    }
+
+    .border-divider1,
+    .border-divider3{
+        height: 200px; /* Altura fixa para a linha */
+    }
+ }
+
+/* Oculta todas as linhas verticais em telas menores e adciona linhas horizontais*/
+@media (max-width: 991px) {
+    .border-divider1,
+    .border-divider2,
+    .border-divider3 {
+        border-right: none; /* Remove as linhas verticais */
+    }
+
+    .divider-horizontal{
+        border-top: 1px solid black; /* Linha horizontal */
+    }
+}
+
+/* Tira linha vertical em telas com 580px ou menos*/
+@media (max-width: 580px) {
+    .divider-horizontal{
+        border-style: none;
+    }
+}
+  
