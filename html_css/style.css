@@ -1,62 +1,55 @@
 @charset "UTF-8";
- @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
 }
 
-
-/*Estilizando o cabeçalho(header) da página*/
-
 body {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Cor de fundo */
 }
 
+/* Cabeçalho */
 header {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 10px;
-    background-color: #ffffff;
-    height: 80px;
-    box-shadow: 0px -5px 50px rgb(91, 91, 91);
-    gap: 50px;
-
+    display: flex; /* Alinha elementos em linha */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor do fundo */
+    height: 80px; /* Altura fixa */
+    box-shadow: 0px -5px 50px rgb(91, 91, 91); /* Sombra no cabeçalho */
+    gap: 50px; /* Espaçamento entre os elementos */
 }
 
 header h1 {
-    font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     font-weight: 300;
-    font-style: normal;
-    margin: 0;
+    margin: 0; /* Remove margens padrão */
 }
 
+/* Navegação */
 nav {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Alinha links em linha */
+    gap: 20px; /* Espaçamento entre os links */
 }
 
 a {
-    position: relative; /* Necessário para o pseudoelemento */
-    color: black; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado padrão */
+    position: relative;
+    color: black; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
     font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
-    font-style: normal;
-    margin: 0;
 }
 
 a::after {
-    content: ""; /* Cria a linha como um pseudoelemento */
-    position: absolute; /* Permite posicioná-la no link */
+    content: ""; /* Linha decorativa abaixo do link */
+    position: absolute;
     left: 0;
-    bottom: -2px; /* Ajusta a posição abaixo do texto */
-    width: 0; /* Começa com largura 0 */
-    height: 2px; /* Altura da linha */
-    background-color: lightgray; /* Cor da linha */
+    bottom: -2px;
+    width: 0; /* Largura inicial */
+    height: 2px;
+    background-color: lightgray;
     transition: width 0.3s ease; /* Animação suave */
 }
 
@@ -64,144 +57,124 @@ a:hover::after {
     width: 100%; /* Expande a linha ao passar o mouse */
 }
 
-/*Carrosel Indicadores*/
+/* Indicadores do Carrossel */
+.carousel-indicators {
+    position: relative;
+    display: flex; /* Indicadores alinhados em linha */
+    justify-content: center; /* Centralização horizontal */
+    margin-top: 40px; /* Espaçamento acima */
+}
 
 .carousel-indicators [data-bs-target] {
-    background-color: rgba(0, 0, 0, 0.452); /* Define a cor preta como fundo dos indicadores */
-    border-top: 0; /* Remove a borda superior dos indicadores */
-    border-bottom: 0; /* Remove a borda inferior dos indicadores */
-    width: 6px; /* Define a largura fixa dos indicadores */
-    height: 6px; /* Define a altura fixa dos indicadores */
-    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.45); /* Fundo semitransparente */
+    width: 6px;
+    height: 6px;
+    margin-left: 5px; /* Espaçamento entre indicadores */
 }
 
-.carousel-indicators {
-    position: relative; /* Garante que o posicionamento seja baseado no fluxo normal da página */
-    display: flex; /* Exibe os botões lado a lado */
-    justify-content: center; /* Centraliza horizontalmente */
-    margin-top: 40px; /* Espaçamento acima dos botões */
-}
-  
-  .carousel-indicators button {
-    width: 12px; /* Tamanho do indicador */
+.carousel-indicators button {
+    width: 12px; /* Tamanho padrão dos indicadores */
     height: 12px;
-    margin: 0 5px; /* Espaçamento entre os botões */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor padrão */
     border: none; /* Remove bordas */
-    border-radius: 50%; /* Formato circular */
+    border-radius: 50%; /* Indicador circular */
 }
-  
-  .carousel-indicators button.active {
-    background-color: #000; /* Cor do botão ativo */
+
+.carousel-indicators button.active {
+    background-color: #000; /* Indicador ativo */
 }
-  
 
-/*Estilizando o corpo(main) da página*/
-
-/* Ajuste da imagem do carrossel */
+/* Imagens do Carrossel */
 .carousel-inner img {
-    padding: 10px 2px 0px 0px;/*Espaçamento de encima e a direita da imagem*/
-    max-width: 1000px; /* Tamanho máximo da imagem */
-    margin: auto; /* Centralização */
+    max-width: 1000px; /* Largura máxima */
+    margin: auto; /* Centraliza a imagem */
+    padding: 10px 2px 0px 0px; /* Espaçamento superior e à direita */
 }
-  
-/* Estilo das setas de controle */
+
+/* Setas de Navegação */
 .carousel-control-prev,
 .carousel-control-next {
-    position: absolute; /* Posiciona sobre o carrossel */
+    position: absolute;
     top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%);
-    z-index: 5; /* Mantém visíveis */
+    z-index: 5; /* Mantém as setas visíveis */
     width: 50px; /* Tamanho fixo */
 }
-  
+
 .carousel-control-prev {
-    left: calc((100% - 1000px) / 2); /* Alinha com a borda da imagem */
+    left: calc((100% - 1000px) / 2); /* Alinha à borda esquerda da imagem */
 }
-  
+
 .carousel-control-next {
-    right: calc((100% - 1000px) / 2); /* Alinha com a borda da imagem */
+    right: calc((100% - 1000px) / 2); /* Alinha à borda direita da imagem */
 }
-  
-/* Ajuste das setas em telas menores */
+
 @media (max-width: 1120px) {
-    .carousel-control-prev {
-      left: 10px; /* Mantém visível em telas pequenas */
+    .carousel-control-prev { left: 10px; } /* Ajusta posição em telas menores */
+    .carousel-control-next { right: 10px; }
 }
 
-.carousel-control-next {
-      right: 10px; /* Mantém visível em telas pequenas */
-    }
-}
-
-
-/* Estilo das legendas */
+/* Legendas no Carrossel */
 .carousel-caption {
     display: block; /* Garante visibilidade */
-    text-align: left; /* Alinhamento à esquerda */
-    font-size: 1rem; /* Tamanho padrão */
+    text-align: left;
     font-family: "Roboto Flex", sans-serif;
-    padding-left: 24px; /* Espaçamento interno */
-    bottom: 10px; /* Reposiciona abaixo */
-    left: 15%; /* Alinha mais à esquerda */
-    width: 90%; /* Evita ultrapassar os limites */
+    font-size: 0.9rem; /* Tamanho padrão do texto */
+    padding-left: 30px; /* Espaçamento interno */
+    color: #fff; /* Texto branco */
+    margin: 0;
 }
 
-h5{
-    font-size: 1.5em;
-    font-family: "Roboto Flex", sans-serif;
+h5, strong, p {
+    font-family: "Roboto Flex", sans-serif; /* Fonte compartilhada */
+}
+
+h5 {
+    font-size: 1.5em; /* Tamanho maior para o título */
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaçamento inferior */
 }
 
-strong{
-    font-family: "Roboto Flex", sans-serif;
-    font-size: 1em;
-    font-weight: 600;
+strong {
+    font-size: 1em; /* Tamanho médio */
+    font-weight: 600; /* Negrito médio */
 }
 
-p{
-    font-family: "Roboto Flex", sans-serif;
-    font-weight: 300;
-    margin-top: 15px;
-    margin-bottom: 15px;
+p {
+    font-weight: 300; /* Texto mais leve */
+    margin: 15px 0; /* Espaçamento acima e abaixo */
 }
 
-.especificacoes{
-    font-family: "Roboto Flex", sans-serif;
-    font-weight: 600;
-    padding-left: 3px;
-    color: #ffffff;
+.especificacoes {
+    font-weight: 600; /* Texto em negrito */
+    color: #ffffff; /* Texto branco */
 }
 
-.especificacoes:hover{
-    color: #d4d2d2;
-    text-decoration-color: #d4d2d2;
+.especificacoes:hover {
+    color: #d4d2d2; /* Cor clara no hover */
 }
 
-/* Ajuste das legendas em telas menores */
+/* Ajustes Responsivos para Legendas */
 @media (max-width: 700px) {
     .carousel-caption {
-      font-size: 0.8rem; /* Reduz tamanho do texto */
-      bottom: 10px; /* Reposiciona abaixo */
-      left: 5%; /* Alinha mais à esquerda */
-      width: 90%; /* Evita ultrapassar os limites */
+        font-size: 0.7rem; /* Reduz tamanho do texto */
+        bottom: 10px; /* Ajusta distância inferior */
+        left: 10px; /* Reduz margem à esquerda */;
+        padding-left: 40px; /* Ajusta margem interna */
     }
 
-    h5{
-        font-family: "Roboto Flex", sans-serif;
-        font-size: 1.2em;
+    h5 {
+        font-size: 1.3em; /* Reduz tamanho do título */
     }
 }
 
 @media (max-width: 600px) {
     .carousel-caption {
-      font-size: 0.6rem; /* Reduz tamanho do texto */
-      bottom: 10px; /* Reposiciona abaixo */
+        font-size: 0.5rem; /* Reduz ainda mais o texto */
+        bottom: 5px; /* Aproxima do fundo */
+        padding-left: 40px; /* Ajusta margem à esquerda */
     }
 
-    h5{
-        font-family: "Roboto Flex", sans-serif;
-        font-size: 1em;
+    h5 {
+        font-size: 1.1em; /* Reduz tamanho do título */
     }
 }
