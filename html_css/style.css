@@ -69,112 +69,121 @@ a:hover::after {
     background-color: rgba(0, 0, 0, 0.45); /* Fundo semitransparente */
     width: 6px;
     height: 6px;
-    margin-left: 5px; /* Espaçamento entre indicadores */
 }
 
 .carousel-indicators button {
-    width: 12px; /* Tamanho padrão dos indicadores */
-    height: 12px;
     border: none; /* Remove bordas */
-    border-radius: 50%; /* Indicador circular */
+    border-radius: 50%; /* Borda circular */
 }
 
 .carousel-indicators button.active {
     background-color: #000; /* Indicador ativo */
 }
 
-/* Imagens do Carrossel */
-.carousel-inner img {
+/*Centralizando Carrosel*/
+#carouselExampleCaptions{
     max-width: 1000px; /* Largura máxima */
-    margin: auto; /* Centraliza a imagem */
-    padding: 10px 2px 0px 0px; /* Espaçamento superior e à direita */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+/*Centralizando telas menores*/
+@media (max-width: 1000px) {
+    #carouselExampleCaptions {
+        max-width: 97%; /* Largura máxima */
+    }
 }
 
 /* Setas de Navegação */
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%; /* Centraliza verticalmente */
+    top: 55%; /* Centraliza verticalmente */
     transform: translateY(-50%);
-    z-index: 5; /* Mantém as setas visíveis */
-    width: 50px; /* Tamanho fixo */
+    width: 40px; /* Largura fixa */
 }
 
-.carousel-control-prev {
-    left: calc((100% - 1000px) / 2); /* Alinha à borda esquerda da imagem */
+.carousel-control-prev{
+    left: 3px; /* Alinha à esquerda */
 }
 
 .carousel-control-next {
-    right: calc((100% - 1000px) / 2); /* Alinha à borda direita da imagem */
-}
-
-@media (max-width: 1120px) {
-    .carousel-control-prev { left: 10px; } /* Ajusta posição em telas menores */
-    .carousel-control-next { right: 10px; }
+    right: 3px; /* Alinha à direita */
 }
 
 /* Legendas no Carrossel */
-.carousel-caption {
-    display: block; /* Garante visibilidade */
-    text-align: left;
-    font-family: "Roboto Flex", sans-serif;
-    font-size: 0.9rem; /* Tamanho padrão do texto */
-    padding-left: 30px; /* Espaçamento interno */
+.custom-caption {
+    position: absolute; /* Define o elemento como posicionado de forma absoluta */
+    top: 50%; /* Centraliza no eixo vertical */
+    left: 0; /* Alinha o elemento ao lado esquerdo (start-0) */
+    transform: translateY(-60%); /* Ajusta o alinhamento central no eixo Y */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-size: 15px; /* Tamanho fixo inicial */
     color: #fff; /* Texto branco */
-    margin: 0;
-}
-
-h5, strong, p {
-    font-family: "Roboto Flex", sans-serif; /* Fonte compartilhada */
+    padding: 0px 0px 0px 50px; /* Espaçamento interno */
 }
 
 h5 {
-    font-size: 1.5em; /* Tamanho maior para o título */
-    font-weight: bold;
-    margin-bottom: 15px; /* Espaçamento inferior */
+    font-size: 25px; /* Tamanho fixo maior */
+    font-weight: bold; /* Negrito */
 }
 
 strong {
-    font-size: 1em; /* Tamanho médio */
-    font-weight: 600; /* Negrito médio */
+    font-size: 17px; /* Tamanho médio fixo */
 }
 
 p {
-    font-weight: 300; /* Texto mais leve */
+    font-size: 14px; /* Texto fixo */
     margin: 15px 0; /* Espaçamento acima e abaixo */
 }
 
 .especificacoes {
-    font-weight: 600; /* Texto em negrito */
-    color: #ffffff; /* Texto branco */
+     font-weight: 600; /* Texto em negrito */
+      color: #ffffff; /* Texto branco */
 }
-
+    
 .especificacoes:hover {
     color: #d4d2d2; /* Cor clara no hover */
 }
 
-/* Ajustes Responsivos para Legendas */
-@media (max-width: 700px) {
-    .carousel-caption {
-        font-size: 0.7rem; /* Reduz tamanho do texto */
-        bottom: 10px; /* Ajusta distância inferior */
-        left: 10px; /* Reduz margem à esquerda */;
-        padding-left: 40px; /* Ajusta margem interna */
+/* Ajusta para telas menores com responsividade */
+@media (max-width: 1000px) {
+    .custom-caption {
+        font-size: 1.5vw; /* Começa a ajustar dinamicamente */
+        padding: 0px 0px 0px 50px; /* Espaçamento interno */
     }
 
     h5 {
-        font-size: 1.3em; /* Reduz tamanho do título */
+        font-size: 2.2vw; /* Texto responsivo proporcional à largura da tela */
+    }
+
+    strong {
+        font-size: 1.7vw;
+    }
+
+    p {
+        font-size: 1.4vw;
+        margin: 13px 0; /* Espaçamento acima e abaixo */
     }
 }
 
 @media (max-width: 600px) {
-    .carousel-caption {
-        font-size: 0.5rem; /* Reduz ainda mais o texto */
-        bottom: 5px; /* Aproxima do fundo */
-        padding-left: 40px; /* Ajusta margem à esquerda */
-    }
-
-    h5 {
-        font-size: 1.1em; /* Reduz tamanho do título */
-    }
+.custom-caption {
+    font-size: 1.4vw; /* Começa a ajustar dinamicamente */
+    padding: 0px 0px 0px 45px; /* Espaçamento interno */
 }
+
+h5 {
+     font-size: 2vw; /* Texto responsivo proporcional à largura da tela */
+}
+
+strong {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.3vw;
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+}
+
