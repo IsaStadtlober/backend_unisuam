@@ -133,7 +133,8 @@ a:hover::after {
     position: relative;
     display: flex; /* Indicadores alinhados em linha */
     justify-content: center; /* Centralização horizontal */
-    margin-top: 40px; /* Espaçamento acima */
+    margin-top: 35px; /* Espaçamento acima */
+    margin-bottom: 25px; /* Espaçamento abaixo */
 }
 
 .carousel-indicators [data-bs-target] {
@@ -149,6 +150,35 @@ a:hover::after {
 
 .carousel-indicators button.active {
     background-color: #000; /* Indicador ativo */
+}
+/*Centralizando Carrosel*/
+#carouselExampleCaptions{
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
+
+/*Centralizando telas menores*/
+@media (max-width: 1000px) {
+    #carouselExampleCaptions {
+        max-width: 97%; /* Largura máxima */
+    }
+}
+
+/* Setas de Navegação */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 55%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    width: 40px; /* Largura fixa */
+}
+
+.carousel-control-prev{
+    left: 3px; /* Alinha à esquerda */
+}
+
+.carousel-control-next {
+    right: 3px; /* Alinha à direita */
 }
 
 /* Legendas no Carrossel */
@@ -226,21 +256,4 @@ p {
     font-size: 1.3vw;
     margin: 10px 0; /* Espaçamento acima e abaixo */
 }
-}
-
-/* Setas de Navegação */
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 55%; /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    width: 40px; /* Largura fixa */
-}
-
-.carousel-control-prev{
-    left: 3px; /* Alinha à esquerda */
-}
-
-.carousel-control-next {
-    right: 3px; /* Alinha à direita */
 }
