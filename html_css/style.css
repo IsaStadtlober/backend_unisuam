@@ -268,17 +268,17 @@ p {
   }
 
 /*Fonte parágrafo*/
-.mt-3{
+.mt-4{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     font-weight: normal; /* Peso da fonte */
-    font-size: 1em; /* Tamanho da fonte */
+    font-size: 1.1em; /* Tamanho da fonte */
 }
 
 /*  Fonte do Botão */
-.btn-sm{
+.btn{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: 600; /* Peso da fonte */
-    font-size: 1em;/* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 0.9em;/* Tamanho da fonte */
 }
 
 /*  Propriedades do Botão */
@@ -287,41 +287,21 @@ p {
 }
 
 /* Linha vertical padrão */
-.border-divider1,
-.border-divider2,
-.border-divider3 {
+.border-divider { 
     border-right: 1px solid black; /* Linha vertical */
-    height: 240px; /* Altura fixa para a linha */
+    height: 250px; /* Altura fixa para a linha */
 }
   
-/* Oculta 1 linha vertical em telas menores */
+/* Oculta linhas verticais em telas menores*/
  @media (max-width: 1200px) {
-    .border-divider2 {
+    .border-divider {
         border-right: none; /* Remove as linhas verticais */
-    }
-
-    .border-divider1,
-    .border-divider3{
-        height: 200px; /* Altura fixa para a linha */
     }
  }
 
-/* Oculta todas as linhas verticais em telas menores e adciona linhas horizontais*/
-@media (max-width: 991px) {
-    .border-divider1,
-    .border-divider2,
-    .border-divider3 {
-        border-right: none; /* Remove as linhas verticais */
+ /* Diminui fonte em telas menores*/
+ @media (max-width: 991px) {
+    .mt-4{
+        font-size: 0.9em; /* Tamanho da fonte */
     }
-
-    .divider-horizontal{
-        border-top: 1px solid black; /* Linha horizontal */
-    }
-}
-
-/* Tira linha vertical em telas com 580px ou menos*/
-@media (max-width: 580px) {
-    .divider-horizontal{
-        border-style: none;
-    }
-}
+ }
