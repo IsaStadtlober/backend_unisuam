@@ -83,7 +83,7 @@ a:hover::after {
 
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1150px; /* Largura máxima */
+    max-width: 1245px; /* Largura máxima */
     margin: auto; /* Centraliza o carrossel */
 }
 
@@ -197,62 +197,38 @@ p {
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
   }
 
-/*Fonte parágrafo*/
-.mt-3{
+/*Fonte Título*/
+.card-title{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: normal; /* Peso da fonte */
-    font-size: 1em; /* Tamanho da fonte */
+    font-weight:700; /* Peso da fonte */
+    font-size: 1.7em; /* Tamanho da fonte */
 }
 
-/*  Fonte do Botão */
+.card-text{
+    font-size: 1.2em;
+}
+
+.custom-card{
+    border-radius: 10px; /* Borda arredondada */
+    transform: scale(0.8);
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+}
+.card:hover {
+    transform: scale(0.9); /* Aumenta levemente o tamanho do card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+/*  PROPRIEDADES BOTÃO*/
 .btn-sm{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     font-weight: 600; /* Peso da fonte */
-    font-size: 1em;/* Tamanho da fonte */
+    font-size: 1.2em;/* Tamanho da fonte */
+    margin: 10px 10px;
 }
 
 /*  Propriedades do Botão */
 .btn-secondary {
     box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
 }
-
-/* Linha vertical padrão */
-.border-divider1,
-.border-divider2,
-.border-divider3 {
-    border-right: 1px solid black; /* Linha vertical */
-    height: 240px; /* Altura fixa para a linha */
-}
-  
-/* Oculta 1 linha vertical em telas menores */
- @media (max-width: 1200px) {
-    .border-divider2 {
-        border-right: none; /* Remove as linhas verticais */
-    }
-
-    .border-divider1,
-    .border-divider3{
-        height: 200px; /* Altura fixa para a linha */
-    }
- }
-
-/* Oculta todas as linhas verticais em telas menores e adciona linhas horizontais*/
-@media (max-width: 991px) {
-    .border-divider1,
-    .border-divider2,
-    .border-divider3 {
-        border-right: none; /* Remove as linhas verticais */
-    }
-
-    .divider-horizontal{
-        border-top: 1px solid black; /* Linha horizontal */
-    }
-}
-
-/* Tira linha vertical em telas com 580px ou menos*/
-@media (max-width: 580px) {
-    .divider-horizontal{
-        border-style: none;
-    }
-}
-  
