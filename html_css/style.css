@@ -114,20 +114,6 @@ a:hover::after {
 
 /* Carrossel */
 
-/*Centralizando Carrosel*/
-#carouselExampleCaptions{
-    max-width: 1000px; /* Largura máxima */
-    margin: 0 auto !important; /* Força centralização */
-}
-
-
-/*Centralizando telas menores*/
-@media (max-width: 1000px) {
-#carouselExampleCaptions {
-        max-width: 98%; /* Largura máxima */
-    }
-}
-
 /* Indicadores do Carrossel */
 .carousel-indicators {
     position: relative;
@@ -153,7 +139,7 @@ a:hover::after {
 }
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1090px; /* Largura máxima */
+    max-width: 1150px; /* Largura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
 }
 
@@ -170,7 +156,7 @@ a:hover::after {
     position: absolute;
     top: 55%; /* Centraliza verticalmente */
     transform: translateY(-50%);
-    width: 40px; /* Largura fixa */
+    width: 50px; /* Largura fixa */
 }
 
 .carousel-control-prev{
@@ -240,49 +226,47 @@ p {
 
 @media (max-width: 600px) {
 .custom-caption {
-    font-size: 1.4vw; /* Começa a ajustar dinamicamente */
+    font-size: 1.5vw; /* Começa a ajustar dinamicamente */
     padding: 0px 0px 0px 45px; /* Espaçamento interno */
 }
 
 h5 {
-     font-size: 2vw; /* Texto responsivo proporcional à largura da tela */
+     font-size: 2.1vw; /* Texto responsivo proporcional à largura da tela */
 }
 
 strong {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
 }
 
 p {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     margin: 10px 0; /* Espaçamento acima e abaixo */
 }
 }
 
-/* SESSÂO 2 */
-
-/* SESSÂO 2 */
+/* SESSÃO 2 */
 
 /* Imagens */
 .img-fluid {
     border-radius: 5px; /* Adiciona bordas arredondadas */
-    margin-top: 20px; /* Espaçamento acima */
+    margin-top: 10px; /* Espaçamento acima */
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
   }
 
 /*Fonte Título*/
 .card-title{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight:700; /* Peso da fonte */
-    font-size: 1.7em; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    font-size: 1.6em; /* Tamanho da fonte */
 }
 
 .card-text{
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .custom-card{
     border-radius: 10px; /* Borda arredondada */
-    transform: scale(0.8);
+    transform: scale(0.8); /* Reduz o tamanho do card */
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.274); /* Sombra suave */
 }
 .card {
@@ -297,7 +281,7 @@ p {
 .btn-sm{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     font-weight: 600; /* Peso da fonte */
-    font-size: 1.2em;/* Tamanho da fonte */
-    margin: 10px 10px;
+    font-size: 1.1em;/* Tamanho da fonte */
+    margin: 10px 10px; /* Espaçamento interno */
     box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
 }
