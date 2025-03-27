@@ -153,7 +153,7 @@ a:hover::after {
 }
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1100px; /* Largura máxima */
+    max-width: 1090px; /* Largura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
 }
 
@@ -260,6 +260,8 @@ p {
 
 /* SESSÂO 2 */
 
+/* SESSÂO 2 */
+
 /* Imagens */
 .img-fluid {
     border-radius: 5px; /* Adiciona bordas arredondadas */
@@ -267,41 +269,35 @@ p {
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
   }
 
-/*Fonte parágrafo*/
-.mt-4{
+/*Fonte Título*/
+.card-title{
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: normal; /* Peso da fonte */
-    font-size: 1.1em; /* Tamanho da fonte */
+    font-weight:700; /* Peso da fonte */
+    font-size: 1.7em; /* Tamanho da fonte */
 }
 
-/*  Fonte do Botão */
-.btn{
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 0.9em;/* Tamanho da fonte */
+.card-text{
+    font-size: 1.2em;
 }
 
-/*  Propriedades do Botão */
-.btn-secondary {
+.custom-card{
+    border-radius: 10px; /* Borda arredondada */
+    transform: scale(0.8);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.274); /* Sombra suave */
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+}
+.card:hover {
+    transform: scale(0.9); /* Aumenta levemente o tamanho do card */
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.226); /* Adiciona sombra */
+}
+
+/*  PROPRIEDADES BOTÃO*/
+.btn-sm{
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-weight: 600; /* Peso da fonte */
+    font-size: 1.2em;/* Tamanho da fonte */
+    margin: 10px 10px;
     box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
 }
-
-/* Linha vertical padrão */
-.border-divider { 
-    border-right: 1px solid black; /* Linha vertical */
-    height: 250px; /* Altura fixa para a linha */
-}
-  
-/* Oculta linhas verticais em telas menores*/
- @media (max-width: 1200px) {
-    .border-divider {
-        border-right: none; /* Remove as linhas verticais */
-    }
- }
-
- /* Diminui fonte em telas menores*/
- @media (max-width: 991px) {
-    .mt-4{
-        font-size: 0.9em; /* Tamanho da fonte */
-    }
- }
