@@ -285,3 +285,10 @@ p {
     margin: 10px 10px; /* Espaçamento interno */
     box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
 }
+
+@media (max-width: 768px) {
+    .custom-card{
+        transform: scale(0.7); /* Reduz o tamanho do card */
+        
+    }
+}
