@@ -81,7 +81,7 @@
 }
 
 input::placeholder, textarea::placeholder {
-    color: #aaa; /* Placeholder com cor suave */
+    color: #1f1e1e; /* Placeholder com cor suave */
 }
 
 .btn {
