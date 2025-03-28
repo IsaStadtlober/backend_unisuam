@@ -9,7 +9,7 @@
 
 /* Estilo do formulário de cadastro */
 #cadastro{
-    background-image: url('img/fundo_cadastro2.png'); /* Substitua pelo caminho correto */
+    background-image: url(img/fundo_cadastro1.png); /* Substitua pelo caminho correto */
     background-size: cover; /* Cobre toda a tela */
     background-repeat: no-repeat;
     background-attachment: fixed;
