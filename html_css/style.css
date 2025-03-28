@@ -15,6 +15,8 @@
 header {
     display: flex; /* Alinha elementos em linha */
     align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espaçamento dinâmico */
     padding: 10px; /* Espaçamento interno */
     background-color: #ffffff; /* Cor do fundo */
     height: 80px; /* Altura fixa */
@@ -26,7 +28,9 @@ header h1 {
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     font-weight: 300;
     margin: 0; /* Remove margens padrão */
+    font-size: 30px;
 }
+
 
 /* Navegação */
 nav {
@@ -56,6 +60,7 @@ a::after {
 a:hover::after {
     width: 100%; /* Expande a linha ao passar o mouse */
 }
+
 /*Barra de pesquisa no header*/
 
 .search-bar {
@@ -66,8 +71,7 @@ a:hover::after {
     border-radius: 5px;
     padding: 5px;
     background-color: #ffffff;
-    margin-left: auto;
-    margin-right: 100px;
+    margin-left: 450px; /* Centraliza dinamicamente */
     box-sizing: border-box;
     max-width: 300px;
     width: 100%;
@@ -90,25 +94,77 @@ a:hover::after {
     font-size: 16px;
 }
 
+
+/*Botões de login e cadastro no header*/
+
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-left: auto; /* Alinha para o lado direito */
+}
+
+.auth-buttons button {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none;
+    background-color: #313131; /* Cor principal */
+    color: white;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #000000; /* Cor ao passar o mouse */
+}
+
 @media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* Espaço entre os elementos */
+        align-items: center; /* Alinha verticalmente os elementos */
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px -5px 50px rgb(91, 91, 91);
+        gap: 15px;
+        position: relative; 
+    }
+
     .search-bar {
-        margin-right: 20px; /* Reduz margem em telas menores */
-        max-width: 90%; /* Limita a largura a 90% do container pai */
+        order: 2;
+        width: 90%; /* Barra mais larga */
+        margin: 10px auto; /* Centraliza */
+        margin-top: 15px;
+    }
+
+    .auth-buttons {
+        order: 1;
+        justify-content: center; /* Alinha os botões ao centro */
+        margin-top: 10px; /* Espaçamento superior */
     }
 }
 
+/* Responsividade para Telas Pequenas (Celulares) */
 @media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Empilha elementos verticalmente */
+        gap: 15px; /* Espaço maior entre os elementos */
+    }
+
     .search-bar {
-        margin: 0 10px; /* Adiciona margens laterais proporcionais */
-        max-width: 100%; /* Ocupa toda a largura disponível */
+        width: 100%; /* Ocupa toda a largura */
     }
 
-    .search-bar input {
-        font-size: 14px; /* Ajusta o tamanho do texto para telas menores */
+    .auth-buttons {
+        flex-direction: column; /* Empilha os botões */
+        gap: 10px; /* Reduz o espaço entre os botões */
     }
 
-    .search-bar button {
-        font-size: 14px; /* Mantém consistência no design */
+    .auth-buttons button {
+        width: 100%; /* Botões ocupam toda a largura */
+        text-align: center;
     }
 }
 
@@ -147,6 +203,12 @@ a:hover::after {
 @media (max-width: 1000px) {
     #carouselExampleCaptions {
         max-width: 97%; /* Largura máxima */
+    }
+}
+
+@media (max-width: 768px){
+    .carousel-indicators {
+        margin-top: 60px;
     }
 }
 
