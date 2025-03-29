@@ -413,3 +413,10 @@ p {
         margin: 1.75rem auto; /* Ajusta o espaçamento */
     }
 }
+
+.form-label{
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1em; /* Tamanho da fonte */
+    margin-left: 3px;
+}
