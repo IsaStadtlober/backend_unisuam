@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="formulario.css">
 </head>
 <body id="cadastro">
+    <!-- Cabeçalho -->
     <header>
         <h1>Start Play</h1>
         <a href="#"></a>
         <nav>
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#">About</a>
             <a href="#">Something</a>
         </nav>
@@ -23,7 +24,7 @@
         </form>
     </header>
 
-    <!-- Formulário abaixo do cabeçalho -->
+    <!-- Formulário -->
     <div class="container">
         <!-- Cabeçalho do formulário -->
         <div class="form-header">
@@ -37,8 +38,8 @@
             </div>
         </div>
 
-        <!-- Formulário -->
-        <form action="processar_cadastro.php" method="POST">
+        <!-- Formulário de cadastro -->
+        <form action="processar_cadastro.php" method="POST" id="cadastro-form">
             <!-- Nome Completo -->
             <div class="mb-4">
                 <label for="nome_completo" class="form-label">Nome Completo:</label>
@@ -90,12 +91,12 @@
                     <label for="telefone_fixo" class="form-label">Telefone Fixo:</label>
                     <input type="tel" id="telefone_fixo" name="telefone_fixo" class="form-control" maxlength="16" placeholder="(+55)XX-XXXXXXXXX" required>
                 </div>
-
             </div>
+
             <!-- CEP -->
             <div class="mb-3">
                 <label for="cep" class="form-label">CEP:</label>
-                 <input type="text" id="cep" name="cep" class="form-control" maxlength="9" placeholder="00000-000" required>
+                <input type="text" id="cep" name="cep" class="form-control" maxlength="9" placeholder="00000-000" required>
             </div>
 
             <!-- Endereço Completo -->
@@ -107,17 +108,20 @@
             <!-- Login -->
             <div class="mb-3">
                 <label for="login" class="form-label">Login:</label>
+                <p class="form-text">Máximo 6 caracteres, somente letras.</p>
                 <input type="text" id="login" name="login" class="form-control" placeholder="Digite seu login" required>
             </div>
 
             <!-- Senhas -->
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="senha" class="form-label">Senha:</label>
+                    <label for="senha" class="form-label">Insira uma senha:</label>
+                    <p class="form-text">Mínimo de 8 caracteres com letras e números.</p>
                     <input type="password" id="senha" name="senha" class="form-control" placeholder="Digite sua senha" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="confirmar_senha" class="form-label">Confirmar Senha:</label>
+                    <label for="confirmar_senha" class="form-label">Confirmar senha:</label>
+                    <p class="form-text">Mínimo de 8 caracteres com letras e números.</p>
                     <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" placeholder="Confirme sua senha" required>
                 </div>
             </div>
@@ -128,32 +132,74 @@
                 <button type="submit" class="btn btn-outline-primary w-100 mt-2">Enviar</button>
             </div>
         </form>
+
+        <!-- Modal de Sucesso -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">Cadastro realizado com sucesso!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        Seus dados foram registrados com sucesso. Você será redirecionado para a página inicial.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-        function mascaraTelefone(telefone) {
-            telefone.value = telefone.value.replace(/\D/g, '');
-            telefone.value = telefone.value.replace(/^(\d{2})(\d)/g, '($1) $2');
-            telefone.value = telefone.value.replace(/(\d)(\d{4})$/, '$1-$2');
-        }
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('cadastro-form').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        function mascaraCpf(cpf) {
-            cpf.value = cpf.value.replace(/\D/g, '');
-            cpf.value = cpf.value.replace(/(\d{3})(\d)/, '$1.$2');
-            cpf.value = cpf.value.replace(/(\d{3})(\d)/, '$1.$2');
-            cpf.value = cpf.value.replace(/(\d{3})(\d{2})$/, '$1-$2');
-        }
+            let isValid = true;
+            const form = event.target;
+            const inputs = form.querySelectorAll('input, textarea, select');
+            let firstInvalidField = null;
 
-        document.getElementById('telefone_celular').addEventListener('input', function() {
-            mascaraTelefone(this);
-        });
+            // Validação do campo Login
+            const login = document.getElementById('login');
+            const loginRegex = /^[a-zA-Z]{6,}$/; // Somente letras, mínimo 6 caracteres
+            if (!loginRegex.test(login.value)) {
+                isValid = false;
+            }
 
-        document.getElementById('telefone_fixo').addEventListener('input', function() {
-            mascaraTelefone(this);
-        });
+            // Validação do campo Senha
+            const senha = document.getElementById('senha');
+            const senhaRegex = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/; // Mínimo 8 caracteres, pelo menos 1 letra e 1 número
+            if (!senhaRegex.test(senha.value)) {
+                isValid = false;
+            }
 
-        document.getElementById('cpf').addEventListener('input', function() {
-            mascaraCpf(this);
+            // Validação do campo Confirmar Senha
+            const confirmarSenha = document.getElementById('confirmar_senha');
+            if (confirmarSenha.value !== senha.value) {
+                isValid = false;
+            }
+
+            // Validação geral dos campos
+            inputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isValid = false;
+                }
+            });
+
+            // Foco no primeiro campo inválido
+            if (!isValid && firstInvalidField) {
+                firstInvalidField.focus();
+                return;
+            }
+
+            // Exibe o modal de sucesso se tudo estiver válido
+            const modal = new bootstrap.Modal(document.getElementById('successModal'));
+            modal.show();
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 4000);
         });
     </script>
 </body>

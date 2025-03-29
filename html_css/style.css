@@ -405,3 +405,11 @@ p {
         
     }
 }
+
+/* Modal */
+@media (max-width: 600px) {
+    .modal-dialog {
+        max-width: 400px; /* Define o tamanho do modal para telas menores */
+        margin: 1.75rem auto; /* Ajusta o espaçamento */
+    }
+}
