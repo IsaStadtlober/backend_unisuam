@@ -246,7 +246,7 @@ a:hover::after {
 }
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1150px; /* Largura máxima */
+    max-width: 1250px; /* Largura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
 }
 
