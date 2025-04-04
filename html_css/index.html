@@ -167,65 +167,34 @@
               <div class="modal-body">
                   <!-- Formulário de Login -->
                   <form id="login-form">
-                      <div class="mb-3">
-                          <label for="email" class="form-label">E-mail:</label>
-                          <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
-                      </div>
-                      <div class="form-actions mt-4 d-flex justify-content-center">
-                          <button type="button" class="btn btn-outline-primary w-75" data-bs-target="#passwordModal" data-bs-toggle="modal" data-bs-dismiss="modal">
-                              Avançar
-                          </button>
-                      </div>
-                  </form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha:</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirm-password" class="form-label">Confirmar Senha:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirme sua senha" required>
+                    </div>
+                    <div class="form-actions mt-4 d-flex justify-content-between">
+                        <button type="reset" class="btn btn-outline-secondary w-50"style="margin-right: 20px;">Limpar</button>
+                        <button type="button" class="btn btn-outline-primary w-50" data-bs-target="#passwordModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Avançar
+                        </button>
+                    </div>
+                </form>
               </div>
               <div class="modal-footer">
                   <p class="mb-1 fs-6">Não tem uma conta? <a href="cadastro.html" class="text-primary">Cadastre-se aqui.</a></p>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <!-- Modal 2: Senha e Confirmar Senha -->
-  <div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content p-4 py-1">
-              <!-- Botão de Voltar no canto superior esquerdo -->
-              <button type="button" class="btn btn-link text-dark position-absolute top-0 start-0 m-3" data-bs-target="#loginModal" data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Voltar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
-                  </svg>
-              </button>
-              <!-- Botão de Fechar no canto superior direito -->
-              <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
-              <!-- Imagem e texto no topo do modal -->
-              <div class="d-flex align-items-center justify-content-center mt-3">
-                  <img src="img/logo-pp2.png" alt="Logo Startplay" style="max-width: 40px; margin-right: 10px;">
-                  <h1 class="fs-5 mb-0">StartPlay</h1>
-              </div>
-              <!-- Título do modal -->
-              <h2 class="modal-title fs-2 text-center mt-3 mb-2" id="passwordModalLabel">Senha</h2>
-              <div class="modal-body">
-                  <!-- Formulário de Senha -->
-                  <form id="password-form">
-                      <div class="mb-3">
-                          <label for="senha" class="form-label">Inserir Senha:</label>
-                          <input type="password" id="senha" name="senha" class="form-control" placeholder="Digite sua senha" required minlength="8">
-                      </div>
-                      <div class="mb-3">
-                          <label for="confirmar_senha" class="form-label">Confirmar Senha:</label>
-                          <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" placeholder="Confirme sua senha" required>
-                      </div>
-                      <div class="form-actions mt-4 d-flex justify-content-center">
-                          <button type="submit" class="btn btn-outline-primary w-75">Enviar</button>
-                      </div>
-                  </form>
-              </div>
-              <div class="modal-footer">
                   <p class="mb-1 fs-6">Esqueceu a Senha? <a href="#" class="text-primary">Mudar aqui.</a></p>
               </div>
           </div>
       </div>
   </div>
+
     <footer>
 
     </footer>
