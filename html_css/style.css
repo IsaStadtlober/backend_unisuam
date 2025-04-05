@@ -247,14 +247,14 @@ a:hover::after {
 
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 1100px; /* Largura máxima */
+    max-width: 90%; /* Largura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
 }
 
 /*Centralizando telas menores*/
 @media (max-width: 1150px) {
     #carouselExampleCaptions {
-        max-width: 97%; /* Largura máxima */
+        max-width: 90%; /* Largura máxima */
     }
 }
 
@@ -315,15 +315,6 @@ p {
     margin: 15px 0; /* Espaçamento acima e abaixo */
 }
 
-.especificacoes {
-     font-weight: 600; /* Texto em negrito */
-      color: #ffffff; /* Texto branco */
-}
-    
-.especificacoes:hover {
-    color: #d4d2d2; /* Cor clara no hover */
-}
-
 /* Ajusta para telas menores com responsividade */
 @media (max-width: 1000px) {
     .custom-caption {
@@ -365,6 +356,56 @@ p {
     font-size: 1.5vw;
     margin: 10px 0; /* Espaçamento acima e abaixo */
 }
+}
+
+/*Especificações*/
+.img-especificacoes {
+    width: 15px; /* Largura fixa */
+    height: 15px; /* Altura fixa */
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+hr{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.especificacoes {
+     font-weight: 600; /* Texto em negrito */
+      color: #ffffff; /* Texto branco */
+}
+    
+.especificacoes:hover {
+    color: #d4d2d2; /* Cor clara no hover */
+}
+
+#especificacoesCard {
+    position: absolute; /* Posiciona o card fora do fluxo normal */
+    top:  -5%;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-90%); /* Ajusta para centralizar corretamente */
+    z-index: 10; /* Garante que o card fique acima do carrossel */
+    width: auto; /* Ajuste o tamanho do card, se necessário */
+    height: auto; /* Altura automática */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    color: #000000;
+}
+
+#especificacoesCard h5{
+    font-size: 13px; 
+}
+
+#especificacoesCard strong {
+    font-size: 11px; /* Tamanho fixo */
+    font-weight: 600;
+}
+
+#especificacoesCard p {
+    margin: 3px; /* Reduz o espaçamento entre os parágrafos */
+    font-size: 10px; 
+    font-weight: 300;
 }
 
 /* SESSÃO 2 */
