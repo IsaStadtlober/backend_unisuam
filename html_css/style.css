@@ -367,8 +367,8 @@ p {
 }
 
 hr{
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 8px;
 }
 
 .especificacoes {
@@ -382,12 +382,12 @@ hr{
 
 #especificacoesCard {
     position: absolute; /* Posiciona o card fora do fluxo normal */
-    top:  -5%;
+    top:  -40%;
     left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-90%); /* Ajusta para centralizar corretamente */
+    transform: translateX(-42%); /* Ajusta para centralizar corretamente */
     z-index: 10; /* Garante que o card fique acima do carrossel */
-    width: auto; /* Ajuste o tamanho do card, se necessário */
-    height: auto; /* Altura automática */
+    width: 700px; /* Ajuste o tamanho do card, se necessário */
+    height: 190px; /* Altura automática */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     color: #000000;
@@ -406,6 +406,99 @@ hr{
     margin: 3px; /* Reduz o espaçamento entre os parágrafos */
     font-size: 10px; 
     font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    #especificacoesCard {
+        position: absolute; /* Posiciona o card fora do fluxo normal */
+        top:  -35%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
+        width: 600px; /* Ajuste o tamanho do card, se necessário */
+        height: 190px; /* Altura automática */
+}
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 800px) {
+    #especificacoesCard {
+        position: absolute; /* Posiciona o card fora do fluxo normal */
+        top:  -35%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
+        width: 500px; /* Ajuste o tamanho do card, se necessário */
+        height: 200px; /* Altura automática */
+}
+
+hr{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+}
+
+@media (max-width: 670px) {
+    #especificacoesCard {
+        position: absolute; /* Posiciona o card fora do fluxo normal */
+        top:  -35%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
+        width: 400px; /* Ajuste o tamanho do card, se necessário */
+        height: 180px; /* Altura automática */
+}
+
+    #especificacoesCard h5{
+        font-size: 10px; 
+}
+
+    #especificacoesCard strong {
+        font-size: 9px; /* Tamanho fixo */
+        font-weight: 600;
+}
+
+    #especificacoesCard p {
+        margin: 3px; /* Reduz o espaçamento entre os parágrafos */
+        font-size: 8px; 
+        font-weight: 300;
+}
+
+hr{
+    margin-bottom: 4px;
+}
+
+}
+
+@media (max-width: 600px) {
+    #especificacoesCard {
+        position: absolute; /* Posiciona o card fora do fluxo normal */
+        top:  -35%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
+        width: 350px; /* Ajuste o tamanho do card, se necessário */
+        height: 155px; /* Altura automática */
+        padding: 5px;
+}
+
+    #especificacoesCard h5{
+        font-size: 8.5px; 
+}
+
+    #especificacoesCard strong {
+        font-size: 7.5px; /* Tamanho fixo */
+        font-weight: 600;
+}
+
+    #especificacoesCard p {
+        margin: 3px; /* Reduz o espaçamento entre os parágrafos */
+        font-size: 6.5px; 
+        font-weight: 300;
+}
+
+hr{
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
 }
 
 /* SESSÃO 2 */
