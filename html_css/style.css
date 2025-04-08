@@ -472,10 +472,10 @@ hr{
     #especificacoesCard {
         position: absolute; /* Posiciona o card fora do fluxo normal */
         top:  -35%;
-        left: 50%; /* Centraliza horizontalmente */
+        left: 51%; /* Centraliza horizontalmente */
         transform: translateX(-42%); /* Ajusta para centralizar corretamente */
         width: 350px; /* Ajuste o tamanho do card, se necessário */
-        height: 155px; /* Altura automática */
+        height: 153px; /* Altura automática */
         padding: 5px;
 }
 
