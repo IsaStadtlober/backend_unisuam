@@ -341,7 +341,7 @@ p {
 .custom-caption {
     font-size: 1.5vw; /* Começa a ajustar dinamicamente */
     padding: 0px 0px 0px 45px; /* Espaçamento interno */
-    margin-bottom: -20px;
+    margin-bottom: -25px;
 }
 
 h5 {
@@ -387,7 +387,7 @@ hr{
     transform: translateX(-42%); /* Ajusta para centralizar corretamente */
     z-index: 10; /* Garante que o card fique acima do carrossel */
     width: 700px; /* Ajuste o tamanho do card, se necessário */
-    height: 190px; /* Altura automática */
+    height: 195px; /* Altura automática */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
     color: #000000;
@@ -415,7 +415,7 @@ hr{
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-42%); /* Ajusta para centralizar corretamente */
         width: 600px; /* Ajuste o tamanho do card, se necessário */
-        height: 190px; /* Altura automática */
+        height: 195px; /* Altura automática */
 }
 }
 
@@ -427,7 +427,7 @@ hr{
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-42%); /* Ajusta para centralizar corretamente */
         width: 500px; /* Ajuste o tamanho do card, se necessário */
-        height: 200px; /* Altura automática */
+        height: 205px; /* Altura automática */
 }
 
 hr{
@@ -440,11 +440,11 @@ hr{
 @media (max-width: 670px) {
     #especificacoesCard {
         position: absolute; /* Posiciona o card fora do fluxo normal */
-        top:  -35%;
+        top:  -30%;
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-42%); /* Ajusta para centralizar corretamente */
         width: 400px; /* Ajuste o tamanho do card, se necessário */
-        height: 180px; /* Altura automática */
+        height: 185px; /* Altura automática */
 }
 
     #especificacoesCard h5{
@@ -471,12 +471,12 @@ hr{
 @media (max-width: 600px) {
     #especificacoesCard {
         position: absolute; /* Posiciona o card fora do fluxo normal */
-        top:  -35%;
+        top:  -30%;
         left: 51%; /* Centraliza horizontalmente */
         transform: translateX(-42%); /* Ajusta para centralizar corretamente */
         width: 350px; /* Ajuste o tamanho do card, se necessário */
-        height: 153px; /* Altura automática */
-        padding: 5px;
+        height: 154px; /* Altura automática */
+        padding: 10px;
 }
 
     #especificacoesCard h5{
@@ -489,14 +489,8 @@ hr{
 }
 
     #especificacoesCard p {
-        margin: 3px; /* Reduz o espaçamento entre os parágrafos */
         font-size: 6.5px; 
         font-weight: 300;
-}
-
-hr{
-    margin-top: 2px;
-    margin-bottom: 5px;
 }
 
 }
