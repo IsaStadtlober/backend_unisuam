@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+/* Estilo do card da página */
 main {
   background-color: white;
   width: 70%;
@@ -12,7 +13,13 @@ main {
   margin: auto;
   margin-top: 100px;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.411);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+}
+
+main:hover{
+    transform: scale(1.1); /* Aumenta levemente o tamanho do card */
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.712); /* Adiciona sombra */
 }
 
 /* Estilo do contêiner Flexbox */
@@ -25,8 +32,8 @@ main {
 
 /* Estilo da imagem */
 .container img {
-    width: 30%;
-    height: auto;
+    width: 30%; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
@@ -34,13 +41,36 @@ main {
 /* Estilo do texto */
 .text-content {
     display: flex;
-    flex-direction: column; /* Organiza o h1 e o p em coluna */
-    gap: 5px; /* Espaçamento entre o h1 e o p */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    gap: 15px; /* Espaçamento entre o h1 e os pares <strong> e <p> */
+    margin-top: 30px;
 }
 
+/* Estilo do título */
 .text-content h1 {
-    font-size: 2.5vw; /* Tamanho do título */
-    font-weight: bolder;
+    font-size: 2.5em; /* Tamanho do título */
+    font-weight: bold;
     font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    margin-top: 40px;
+    color: #000; /* Garante que o texto seja visível */
+}
+
+/* Estilo dos pares <strong> e <p> */
+.info {
+    display: flex; /* Define o layout como Flexbox */
+    align-items: flex-start;
+    gap: 50px; /* Espaçamento entre o <strong> e o <p> */
+}
+
+.info strong {
+    width: 150px; /* Define uma largura fixa para o <strong> */
+    font-size: 1em; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    color: #000; /* Cor do texto */
+    white-space: nowrap; /* Impede quebra de linha no <strong> */
+}
+
+.info p {
+    font-size: 0.9em; /* Tamanho do texto */
+    color: #0067b8; /* Cor do texto */
+    margin: 0; /* Remove margens padrão */
 }
