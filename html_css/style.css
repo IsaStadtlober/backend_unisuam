@@ -372,8 +372,8 @@ hr{
 }
 
 .especificacoes {
-     font-weight: 600; /* Texto em negrito */
-      color: #ffffff; /* Texto branco */
+    font-weight: 600; /* Texto em negrito */
+    color: #ffffff; /* Texto branco */
 }
     
 .especificacoes:hover {
