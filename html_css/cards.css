@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
+/* Regras de Estilo Global*/
 *{
-    font-family: 'Roboto Flex', sans-serif; /* Fonte principal */
+    font-family: 'Roboto Flex', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Estilo do card da página */
+/* Estilo do corpo do card*/
 .card-body {
   background-color: white;
   width: 70%;
@@ -15,81 +16,77 @@
   margin-top: 150px;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.411);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 150px;
 }
 
 .card-body:hover{
-    transform: scale(1.1); /* Aumenta levemente o tamanho do card */
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.712); /* Adiciona sombra */
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.712); 
 }
 
-/* Estilo para o article */
+/* Estilos para o article*/
 .container {
-    display: flex; /* Define o layout como Flexbox */
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 35px; /* Espaçamento entre a imagem e o texto */
-    padding: 40px; /* Espaçamento interno do contêiner */
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 40px;
     margin-left: 20px;
 }
 
-/* Estilo da imagem */
+/* Estilo da imagem do article*/
 .container img {
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
+    height: auto;
+    border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.349);
 }
 
-/* Estilo do texto */
+/* Estilo para o texto do article*/
 .game-details {
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    gap: 15px; /* Espaçamento entre o h1 e os pares <strong> e <p> */
+    flex-direction: column;
+    gap: 15px;
     margin-top: 30px;
 }
 
-/* Estilo do título */
 .game-details h1 {
-    font-size: 2.5vw; /* Tamanho do título */
+    font-size: 2.5vw; 
     letter-spacing: 3px;
     font-weight: bold;
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    color: #000; /* Garante que o texto seja visível */
-    white-space: nowrap; /* Impede quebra de linha */
+    color: #000; 
+    white-space: nowrap; 
 }
 
-/* Estilo dos pares <strong> e <p> */
 .info {
-    display: flex; /* Define o layout como Flexbox */
+    display: flex; 
     align-items: flex-start;
-    gap: 50px; /* Espaçamento entre o <strong> e o <p> */
+    gap: 50px;
 }
 
 .info strong {
-    width: 150px; /* Define uma largura fixa para o <strong> */
-    font-size: 1.1vw; /* Tamanho do texto */
-    font-weight: bold; /* Negrito */
-    color: #000; /* Cor do texto */
-    white-space: nowrap; /* Impede quebra de linha no <strong> */
+    width: 150px; 
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
     margin-left: 5px;
 }
 
 .info p {
-    font-size: 1vw; /* Tamanho do texto */
-    color: #0067b8; /* Cor do texto */
-    margin: 0; /* Remove margens padrão */
-    white-space: nowrap; /* Impede quebra de linha */
+    font-size: 1vw;
+    color: #0067b8;
+    margin: 0;
+    white-space: nowrap;
 }
 
 
-/* Contêiner principal dos requisitos */
+/* Estilo para o aside*/
 .requisitos {
-    display: flex; /* Define o layout como Flexbox */
-    justify-content: space-between; /* Espaça os blocos igualmente */
-    align-items: flex-start; /* Alinha os itens no topo */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* Estilo para o aside */
 .requisitos-minimos{
     flex: 1;
     padding: 20px 0px 30px 70px;
@@ -100,34 +97,32 @@
     padding: 20px 70px 30px 0px;
 }
 
-
-/* Estilo para os títulos */
+/* Estilo para os textos do aside*/
 .requisitos-minimos h2,
 .requisitos-recomendados h2 {
-    font-size: 1.7vw; /* Tamanho do título */
-    margin-bottom: 50px; /* Espaçamento abaixo do título */
-    font-weight: 700; /* Negrito */
+    font-size: 1.7vw; 
+    margin-bottom: 50px; 
+    font-weight: 700;
     color: #000;
 }
 
-/* Estilo para os parágrafos */
 .requisitos-minimos strong,
 .requisitos-recomendados strong{
-    font-size: 1.2vw; /* Tamanho do texto */
-    font-weight: 600; /* Negrito */
-    color: #000000; /* Cor do texto */
+    font-size: 1.2vw; 
+    font-weight: 600;
+    color: #000000;
 }
 
 .requisitos-minimos p,
 .requisitos-recomendados p {
-    font-size: 1vw; /* Tamanho do texto */
-    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
-    line-height: 1.5; /* Espaçamento entre as linhas */
-    color: #5a5a5a; /* Cor do texto */
+    font-size: 1vw;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #5a5a5a;
     width: 90%;
 }
 
-/*Estilo footer*/
+/*Estilo separação*/
 hr{
     margin: auto;
     margin-top: 40px;
@@ -135,6 +130,7 @@ hr{
     width: 90%;
 }
 
+/*Estilo para a section game-sinopse*/
 .sinopse{
     font-size: 2vw;
     font-weight: 800;
@@ -164,57 +160,58 @@ hr{
     }
 
     .container img {
-        width: 35%; /* Ajusta o tamanho da imagem para telas menores */
+        width: 35%;
     }
 
     .container .game-details h1{
-        font-size: 2vw; /* Tamanho do título para telas menores */
-        
+        font-size: 2vw;
     }
 
     .info {
-        display: flex; /* Define o layout como Flexbox */
+        display: flex;
         align-items: flex-start;
-        gap: 25px; /* Espaçamento entre o <strong> e o <p> */
+        gap: 25px;
     }
 
     .info strong{
-        font-size: 1.2vw; /* Tamanho do texto para telas menores */
+        font-size: 1.2vw;
     }
 
     .info p{
-        font-size: 1vw; /* Tamanho do texto para telas menores */
+        font-size: 1vw;
     }
 }
 
 
 @media (max-width: 900px) {
-    /*Estilo aside*/
+    /*Estilo article*/
     .container {
-        flex-direction: column; /* Empilha a imagem e o texto verticalmente */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
         margin-left: 0px;
     }
 
     .container img {
-        width: 40%; /* Ajusta o tamanho da imagem para telas menores */
+        width: 40%;
     }
 
     .container .game-details h1 {
-        text-align: center; /* Centraliza o título */
-        font-size: 3vw; /* Tamanho do título para telas menores */
+        text-align: center;
+        font-size: 3vw;
     }
 
     .info strong{
         margin-left: 10px;
     }
 
+    /* Estilo aside*/
     .requisitos{
-        gap: 30px; /* Espaçamento entre os blocos */
+        gap: 30px;
         padding-top: 20px;
         padding-left: 30px;
     }
 
+    /*Estilo separação*/
     hr{
         margin-top: 15px;
         margin-bottom: 20px;
@@ -224,34 +221,34 @@ hr{
 @media (max-width: 850px) {
     /* Estilo para o article */
     .game-details h1 {
-        font-size: 3vw; /* Tamanho do título */
+        font-size: 3vw;
     }
 
     .info {
         display: block;
         text-align: center;
-        line-height: 2; /* Espaçamento entre as linhas */
+        line-height: 2;
     }
 
     .info strong{
         margin: 0%;
-        font-size: 2vw; /* Tamanho do texto para telas menores */
+        font-size: 2vw;
     }
 
     .info p{
-        font-size: 1.5vw; /* Tamanho do texto para telas menores */
+        font-size: 1.5vw; 
     }
 
+    /* Estilo para o aside */
     .requisitos {
-        display: flex; /* Define o layout como Flexbox */
-        align-items: center; /* Alinha os itens no topo */
-        flex-direction: column; /* Empilha os blocos verticalmente */
-        gap: 50px; /* Espaçamento entre os blocos */
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        gap: 50px;
         text-align: center;
         padding-left: 0px;
     }
 
-    /* Estilo para o aside */
     .requisitos-minimos{
         flex: 1;
         padding:  20px 0px 0px 0px;
@@ -263,27 +260,26 @@ hr{
     }
 
 
-    /* Estilo para os títulos */
+    /* Estilo para textos aside*/
     .requisitos-minimos h2,
     .requisitos-recomendados h2{
-        font-size: 2.5vw; /* Tamanho do título */
+        font-size: 2.5vw;
     }
 
-    /* Estilo para os parágrafos */
     .requisitos-minimos strong,
     .requisitos-recomendados strong{
-        display: block; /* Garante que o <strong> seja exibido como um bloco */
-        font-size: 1.9vw; /* Tamanho do texto */
+        display: block;
+        font-size: 1.9vw;
     }
 
     .requisitos-minimos p,
     .requisitos-recomendados p{
-        display: block; /* Garante que o <p> seja exibido como um bloco */
-        font-size: 1.5vw; /* Tamanho do texto */
+        display: block;
+        font-size: 1.5vw; 
        
     }
 
-    /*Estilo footer*/
+    /*Estilo para a section game-sinopse*/
     .sinopse{
         font-size: 2.5vw;
     }
@@ -295,20 +291,20 @@ hr{
 }
 
 @media (max-width: 700px) {
-    /* Estilo do card da página */
+    /* Estilo do corpo do card*/
     .card-body {
-        width: 80%; /* Largura do card */
-        margin: auto; /* Centraliza o card na página */
-        margin-top: 150px; /* Espaçamento superior */
-        margin-bottom: 150px; /* Espaçamento inferior */
+        width: 80%;
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 150px;
     }
 
     .card-body:hover{
-        transform: scale(1.05); /* Aumenta levemente o tamanho do card */
+        transform: scale(1.05);
     }
 
-    /*Article*/
+    /*Estilo do article*/
     .game-details h1 {
-        font-size: 3.5vw; /* Tamanho do título */
+        font-size: 3.5vw;
     }
 }
