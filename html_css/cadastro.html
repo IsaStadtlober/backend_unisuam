@@ -113,7 +113,7 @@
             <!-- Login -->
             <div class="mb-3">
                 <label for="login" class="form-label">Login:</label>
-                <p class="form-text">Máximo 6 caracteres, somente letras.</p>
+                <p class="form-text">Máximo de 6 caracteres alfabéticos.</p>
                 <input type="text" id="login" name="login" class="form-control" placeholder="Digite seu login" required>
             </div>
 
@@ -121,12 +121,12 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="senha" class="form-label">Insira uma senha:</label>
-                    <p class="form-text">Mínimo de 8 caracteres com letras e números.</p>
+                    <p class="form-text">Máximo de 8 caracteres alfabéticos.</p>
                     <input type="password" id="senha" name="senha" class="form-control" placeholder="Digite sua senha" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="confirmar_senha" class="form-label">Confirmar senha:</label>
-                    <p class="form-text">Mínimo de 8 caracteres com letras e números.</p>
+                    <p class="form-text">Máximo de 8 caracteres alfabéticos.</p>
                     <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" placeholder="Confirme sua senha" required>
                 </div>
             </div>
@@ -174,15 +174,17 @@
 
             // Validação do campo Senha
             const senha = document.getElementById('senha');
-            const senhaRegex = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/; // Mínimo 8 caracteres, pelo menos 1 letra e 1 número
+            const senhaRegex = /^[a-zA-Z]{1,8}$/; // Apenas letras, máximo 8 caracteres
             if (!senhaRegex.test(senha.value)) {
                 isValid = false;
+                firstInvalidField = firstInvalidField || senha; // Armazena o primeiro campo inválido
             }
 
             // Validação do campo Confirmar Senha
             const confirmarSenha = document.getElementById('confirmar_senha');
-            if (confirmarSenha.value !== senha.value) {
+            if (!senhaRegex.test(confirmarSenha.value) || confirmarSenha.value !== senha.value) {
                 isValid = false;
+                firstInvalidField = firstInvalidField || confirmarSenha; // Armazena o primeiro campo inválido
             }
 
             // Validação geral dos campos
