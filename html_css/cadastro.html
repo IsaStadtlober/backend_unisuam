@@ -98,16 +98,73 @@
                 </div>
             </div>
 
-            <!-- CEP -->
-            <div class="mb-3">
-                <label for="cep" class="form-label">CEP:</label>
-                <input type="text" id="cep" name="cep" class="form-control" maxlength="9" placeholder="00000-000" required>
+            <!-- Endereço e CEP -->
+            <div class="row">
+                <div class="col-md-8 mb-3">
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="text" id="cep" name="cep" class="form-control" maxlength="9" placeholder="00000-000" required>
+                </div>
             </div>
 
-            <!-- Endereço Completo -->
-            <div class="mb-3">
-                <label for="endereco_completo" class="form-label">Endereço Completo:</label>
-                <textarea id="endereco_completo" name="endereco_completo" class="form-control" rows="3" placeholder="Digite seu endereço completo" required></textarea>
+            <!-- Complemento e Número -->
+            <div class="row">
+                <div class="col-md-8 mb-3">
+                    <label for="complemento" class="form-label">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento" class="form-control" placeholder="Apto, Bloco, etc.">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="numero" class="form-label">Número:</label>
+                    <input type="text" id="numero" name="numero" class="form-control" placeholder="Nº" required>
+                </div>
+            </div>
+
+            <!-- Cidade, Bairro e UF -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="cidade" class="form-label">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Digite sua cidade" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Digite seu bairro" required>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="uf" class="form-label">UF:</label>
+                    <select id="uf" name="uf" class="form-select" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Login -->
