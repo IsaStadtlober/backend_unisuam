@@ -47,6 +47,12 @@
     border-radius: 20px;
 }
 
+.containerV img {
+    position: absolute;
+    left: 8%; /* Centraliza horizontalmente */
+    top: -15px;
+}
+
 .linhadata {
     width: 3px;                     /* Espessura da linha */
     height: 615%;                   /* Altura relativa à altura da viewport */
@@ -91,6 +97,14 @@
     border-radius: 20px;
 }
 
+.container2 img {
+    position: absolute;
+    right: -15px;
+    top: -20px;
+    width: 280px;
+    
+}
+
 .linhaver2 {
     width: 100px;
     height: 3px;
@@ -123,6 +137,12 @@
     height: 250px;
     box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
     border-radius: 20px;
+}
+
+.container3 img {
+    position: absolute;
+    width: 220px;
+    left: 15px;
 }
 
 .linhaver3 {
@@ -159,6 +179,12 @@
     border-radius: 20px;
 }
 
+.container4 img {
+    position: absolute;
+    right: 50px;
+    top: -170px;
+}
+
 .linhaver4 {
     width: 100px;
     height: 3px;
@@ -191,6 +217,10 @@
     height: 250px;
     box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
     border-radius: 20px;
+}
+
+.container5 img {
+    width: 250px;
 }
 
 .linhaver5 {
@@ -231,6 +261,10 @@
     border-radius: 20px;
 }
 
+.container6 img {
+    width: 250px;
+}
+
 .linhaver6 {
     width: 100px;
     height: 3px;
@@ -263,6 +297,12 @@
     height: 250px;
     box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
     border-radius: 20px;
+}
+
+.container7 img {
+    position: absolute;
+    width: 250px;
+    right: 10px;
 }
 
 .linhaver7 {
@@ -299,6 +339,13 @@
     border-radius: 20px;
 }
 
+.container8 img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 220px;
+}
+
 .linhaver8 {
     width: 100px;
     height: 3px;
@@ -331,6 +378,12 @@
     height: 250px;
     box-shadow: 1px 2px 10px rgb(0, 0, 0, 0.411);
     border-radius: 20px;
+}
+
+.container9 img {
+    position: absolute;
+    left: 10px;
+    width: 220px;
 }
 
 .linhaver9 {
@@ -367,6 +420,10 @@
     border-radius: 20px;
 }
 
+.container10 img {
+    width: 250px;
+}
+
 .linhaver10 {
     width: 100px;
     height: 3px;
@@ -390,6 +447,26 @@
     letter-spacing: 7px;
 }
 
+.consoles h1.cons_final {
+    all: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    margin: auto;
+    letter-spacing: 7px;
+    margin-bottom: 40px;
+}
+
+.consoles p.par_final {
+    all: unset;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    width: 1000px;
+    text-align: justify;
+    padding-bottom: 30px;
+    margin: auto;
+}
 
 
 
