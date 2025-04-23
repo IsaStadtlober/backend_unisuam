@@ -468,3 +468,215 @@
     margin: auto;
 }
 
+@media screen and (max-width: 1325px) {
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        width: 200px; /* Reduz a largura dos containers */
+        height: 200px; /* Mantém altura ajustável */
+        margin-left: 70px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .containerV img {
+        width: 400px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container2 img {
+        width: 220px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+        position: relative;
+        top: 2px;
+        right: 10px;
+    }
+
+    .container3 img {
+        width: 170px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container4 img {
+        width: 400px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+        position: relative;
+        right: 230px;
+        top: -130px;
+    }
+
+    .container5 img, .container6 img, .container7 img, .container9 img, .container10 img {
+        width: 200px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container8 img {
+        width: 180px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .container9 img {
+        width: 180px; /* Reduz o tamanho das imagens */
+        height: auto; /* Mantém proporção */
+    }
+
+    .linhadata, .linhaver, .linhaver2, .linhaver3, .linhaver4,
+    .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
+    .linhaver10 {
+        display: none;
+    }  
+    
+    .data1, .data1_2, .data1_3, .data1_4, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        position: absolute;
+        right: 150px;
+    }
+
+    .data1_5 {
+        position: absolute;
+        right: 150px;
+        top: 1950px;
+    }
+
+    .data1_6 {
+        position: absolute;
+        right: 150px;
+        top: 2400px;
+    }
+
+    .data1_7 {
+        position: absolute;
+        right: 150px;
+        top: 2825px;
+    }
+
+    .data1_8 {
+        position: absolute;
+        right: 150px;
+        top: 3270px;
+    }
+
+    .data1_9 {
+        position: absolute;
+        right: 150px;
+        top: 3710px;
+    }
+
+    .data1_10 {
+        position: absolute;
+        right: 150px;
+        top: 4130px;
+    }
+
+    .dreamwave {
+        all: unset;
+        letter-spacing: 2px;
+    }
+
+    .consoles h2 {
+        font-size: 18px;
+    }
+
+    .consoles p.par_final {
+        width: 700px;
+    }
+}   
+
+@media screen and (max-width: 1000px) {
+    .consoles h1 {
+        font-size: 45px;
+        letter-spacing: 10px;
+        margin: auto;
+    }
+    .consoles h2 {
+        font-size: 18px;
+        letter-spacing: 20px;
+        margin: auto;
+    }
+    .consoles p {
+        width: auto;
+        font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    .data1, .data1_3 ,.data1_4, .data1_5, .data1_9, .data1_10 {
+        all: unset;
+        margin: auto;
+        position: relative;
+        top: -470px;
+    }
+    .data1_2, .data1_6, .data1_7, .data1_8 {
+        all: unset;
+        margin: auto;
+        position: relative;
+        top: -500px;
+    } 
+    .data1 p, .data1_2 p, .data1_3 p, .data1_4 p, .data1_5 p, .data1_6 p, .data1_7 p, .data1_8 p, .data1_9 p, .data1_10 p {
+        font-size: 30px;
+    }
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: -20px;
+        left: 100px;
+        width: 220px;
+        height: 220px;
+        margin: -100px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .consoles {
+        align-items: center;
+        padding: 5% 5%;
+    }
+    .consoles h1 {
+        font-size: 28px;
+        letter-spacing: 7px;
+        text-align: center;
+    }
+    .consoles h2 {
+        font-size: 16px;
+        letter-spacing: 10px;
+    }
+    .consoles p {
+        font-size: 12px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .linhadata, .linhaver, .linhaver2, .linhaver3, .linhaver4,
+    .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
+    .linhaver10 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .consoles h1 {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+    .consoles h2 {
+        font-size: 14px;
+        letter-spacing: 7px;
+    }
+    .consoles p {
+        font-size: 10px;
+    }
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        width: 90%;
+        margin: 10px auto;
+        
+    }
+}
