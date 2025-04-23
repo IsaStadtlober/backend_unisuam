@@ -560,4 +560,40 @@ hr{
 }
 
 
+/* Footer */
+.footer-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 20px;
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.432); /* Sombra semelhante ao header */
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.footer-index p {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 14px;
+    color: #313131;
+    margin: 0;
+}
+
+.footer-index a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-index a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para o Footer */
+@media (max-width: 768px) {
+    .footer-index {
+        text-align: center;
+    }
+}
 
