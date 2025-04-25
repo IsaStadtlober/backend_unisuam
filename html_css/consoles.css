@@ -580,10 +580,25 @@
 }   
 
 @media screen and (max-width: 1000px) {
+    .consoles h1.primeiro_h1 {
+        all: unset;
+        font-size: 45px;
+        margin: auto;
+        letter-spacing: 10px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 45px;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        letter-spacing: 15px;
+        margin-bottom: 2px;  
+    }
     .consoles h1 {
         font-size: 45px;
         letter-spacing: 10px;
         margin: auto;
+        margin-top: 150px;
+        position: relative;
     }
     .consoles h2 {
         font-size: 18px;
@@ -597,21 +612,10 @@
         margin-bottom: 60px;
     }
     
-    .data1, .data1_3 ,.data1_4, .data1_5, .data1_9, .data1_10 {
-        all: unset;
-        margin: auto;
-        position: relative;
-        top: -470px;
+    .data1,  .data1_2, .data1_3 ,.data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
     }
-    .data1_2, .data1_6, .data1_7, .data1_8 {
-        all: unset;
-        margin: auto;
-        position: relative;
-        top: -500px;
-    } 
-    .data1 p, .data1_2 p, .data1_3 p, .data1_4 p, .data1_5 p, .data1_6 p, .data1_7 p, .data1_8 p, .data1_9 p, .data1_10 p {
-        font-size: 30px;
-    }
+
     .containerV, .container2, .container3, .container4,
     .container5, .container6, .container7, .container8,
     .container9, .container10 {
@@ -622,12 +626,40 @@
         height: 220px;
         margin: -100px auto;
     }
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        font-size: 37px;
+    }
+    .consoles p.par_final {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 794px) {
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .consoles {
         align-items: center;
         padding: 5% 5%;
+    }
+    .consoles h1.primeiro_h1 {
+        all: unset;
+        margin: auto;
+        letter-spacing: 7px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 28px;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        letter-spacing: 15px;
+        margin-bottom: 2px;  
     }
     .consoles h1 {
         font-size: 28px;
@@ -657,6 +689,11 @@
     .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
     .linhaver10 {
         display: none;
+    }
+
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 50px;
     }
 }
 
