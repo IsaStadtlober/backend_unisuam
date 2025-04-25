@@ -8,7 +8,7 @@
 }
 
 #index{
-    background-color: #ffffff; /* Cor de fundo */
+    background-color: #ffffff;
 }
 
 /* Cabeçalho */
@@ -30,9 +30,9 @@ header img {
 }
 
 header h1 {
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    font-family: "Roboto Flex", sans-serif;
     font-weight: 300;
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
     font-size: 30px;
     flex-shrink: 0;
 }
@@ -40,32 +40,32 @@ header h1 {
 
 /* Navegação */
 nav {
-    display: flex; /* Alinha links em linha */
-    gap: 20px; /* Espaçamento entre os links */
+    display: flex;
+    gap: 20px;
     margin-left: auto;
 }
 
 a {
     position: relative;
-    color: black; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado */
+    color: black;
+    text-decoration: none;
     font-family: "Roboto Flex", sans-serif;
     font-weight: 300;
 }
 
 a::after {
-    content: ""; /* Linha decorativa abaixo do link */
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 0; /* Largura inicial */
+    width: 0;
     height: 2px;
     background-color: lightgray;
-    transition: width 0.3s ease; /* Animação suave */
+    transition: width 0.3s ease;
 }
 
 a:hover::after {
-    width: 100%; /* Expande a linha ao passar o mouse */
+    width: 100%;
 }
 
 /*Barra de pesquisa no header*/
@@ -107,7 +107,7 @@ a:hover::after {
 
 .auth-buttons {
     display: flex;
-    gap: 15px; /* Espaçamento entre os botões */
+    gap: 15px;
     margin-left: auto;
 }
 
@@ -224,37 +224,37 @@ a:hover::after {
 /* Indicadores do Carrossel */
 .carousel-indicators {
     position: relative;
-    display: flex; /* Indicadores alinhados em linha */
-    justify-content: center; /* Centralização horizontal */
-    margin-top: 35px; /* Espaçamento acima */
-    margin-bottom: 25px; /* Espaçamento abaixo */
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
 }
 
 .carousel-indicators [data-bs-target] {
-    background-color: rgba(0, 0, 0, 0.45); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.45);
     width: 6px;
     height: 6px;
 }
 
 .carousel-indicators button {
-    border: none; /* Remove bordas */
-    border-radius: 50%; /* Borda circular */
+    border: none;
+    border-radius: 50%;
 }
 
 .carousel-indicators button.active {
-    background-color: #000; /* Indicador ativo */
+    background-color: #000;
 }
 
 /*Centralizando Carrosel*/
 #carouselExampleCaptions{
-    max-width: 90%; /* Largura máxima */
-    margin: 0 auto; /* Centraliza o carrossel */
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 /*Centralizando telas menores*/
 @media (max-width: 1150px) {
     #carouselExampleCaptions {
-        max-width: 90%; /* Largura máxima */
+        max-width: 90%;
     }
 }
 
@@ -268,17 +268,17 @@ a:hover::after {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 55%; /* Centraliza verticalmente */
+    top: 55%;
     transform: translateY(-50%);
-    width: 50px; /* Largura fixa */
+    width: 50px;
 }
 
 .carousel-control-prev{
-    left: 3px; /* Alinha à esquerda */
+    left: 3px;
 }
 
 .carousel-control-next {
-    right: 3px; /* Alinha à direita */
+    right: 3px;
 }
 
 @media (max-width: 1000px){
@@ -290,41 +290,41 @@ a:hover::after {
 
 /* Legendas no Carrossel */
 .custom-caption {
-    position: absolute; /* Define o elemento como posicionado de forma absoluta */
-    top: 50%; /* Centraliza no eixo vertical */
-    left: 0; /* Alinha o elemento ao lado esquerdo (start-0) */
-    transform: translateY(-60%); /* Ajusta o alinhamento central no eixo Y */
-    text-align: left; /* Alinha o texto à esquerda */
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-size: 15px; /* Tamanho fixo inicial */
-    color: #fff; /* Texto branco */
-    padding: 0px 0px 0px 50px; /* Espaçamento interno */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-60%);
+    text-align: left;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    padding: 0px 0px 0px 50px;
 }
 
 h5 {
-    font-size: 25px; /* Tamanho fixo maior */
-    font-weight: bold; /* Negrito */
+    font-size: 25px;
+    font-weight: bold;
 }
 
 strong {
-    font-size: 17px; /* Tamanho médio fixo */
+    font-size: 17px;
 }
 
 p {
-    font-size: 14px; /* Texto fixo */
-    margin: 15px 0; /* Espaçamento acima e abaixo */
+    font-size: 14px;
+    margin: 15px 0;
 }
 
 /* Ajusta para telas menores com responsividade */
 @media (max-width: 1000px) {
     .custom-caption {
-        font-size: 1.5vw; /* Começa a ajustar dinamicamente */
-        padding: 0px 0px 0px 50px; /* Espaçamento interno */
+        font-size: 1.5vw;
+        padding: 0px 0px 0px 50px;
         margin-bottom: -20px;
     }
 
     h5 {
-        font-size: 2.2vw; /* Texto responsivo proporcional à largura da tela */
+        font-size: 2.2vw;
     }
 
     strong {
@@ -333,19 +333,19 @@ p {
 
     p {
         font-size: 1.4vw;
-        margin: 13px 0; /* Espaçamento acima e abaixo */
+        margin: 13px 0;
     }
 }
 
 @media (max-width: 650px) {
 .custom-caption {
-    font-size: 1.5vw; /* Começa a ajustar dinamicamente */
-    padding: 0px 0px 0px 45px; /* Espaçamento interno */
+    font-size: 1.5vw;
+    padding: 0px 0px 0px 45px;
     margin-bottom: -25px;
 }
 
 h5 {
-     font-size: 2.1vw; /* Texto responsivo proporcional à largura da tela */
+     font-size: 2.1vw;
 }
 
 strong {
@@ -354,14 +354,14 @@ strong {
 
 p {
     font-size: 1.5vw;
-    margin: 10px 0; /* Espaçamento acima e abaixo */
+    margin: 10px 0;
 }
 }
 
 /*Especificações*/
 .img-especificacoes {
-    width: 15px; /* Largura fixa */
-    height: 15px; /* Altura fixa */
+    width: 15px;
+    height: 15px;
     margin-right: 8px;
     margin-bottom: 10px;
 }
@@ -372,24 +372,24 @@ hr{
 }
 
 .especificacoes {
-    font-weight: 600; /* Texto em negrito */
-    color: #ffffff; /* Texto branco */
+    font-weight: 600;
+    color: #ffffff;
 }
     
 .especificacoes:hover {
-    color: #d4d2d2; /* Cor clara no hover */
+    color: #d4d2d2;
 }
 
 #especificacoesCard {
-    position: absolute; /* Posiciona o card fora do fluxo normal */
+    position: absolute;
     top:  -40%;
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-42%); /* Ajusta para centralizar corretamente */
-    z-index: 10; /* Garante que o card fique acima do carrossel */
-    width: 700px; /* Ajuste o tamanho do card, se necessário */
-    height: 195px; /* Altura automática */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
+    left: 50%;
+    transform: translateX(-42%);
+    z-index: 10;
+    width: 700px;
+    height: 195px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto Flex", sans-serif;
     color: #000000;
 }
 
@@ -398,36 +398,36 @@ hr{
 }
 
 #especificacoesCard strong {
-    font-size: 11px; /* Tamanho fixo */
+    font-size: 11px;
     font-weight: 600;
 }
 
 #especificacoesCard p {
-    margin: 3px; /* Reduz o espaçamento entre os parágrafos */
+    margin: 3px;
     font-size: 10px; 
     font-weight: 300;
 }
 
 @media (max-width: 1000px) {
     #especificacoesCard {
-        position: absolute; /* Posiciona o card fora do fluxo normal */
+        position: absolute;
         top:  -35%;
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
-        width: 600px; /* Ajuste o tamanho do card, se necessário */
-        height: 195px; /* Altura automática */
+        left: 50%;
+        transform: translateX(-42%);
+        width: 600px;
+        height: 195px; 
 }
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 800px) {
     #especificacoesCard {
-        position: absolute; /* Posiciona o card fora do fluxo normal */
+        position: absolute;
         top:  -35%;
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
-        width: 500px; /* Ajuste o tamanho do card, se necessário */
-        height: 205px; /* Altura automática */
+        left: 50%;
+        transform: translateX(-42%); 
+        width: 500px; 
+        height: 205px; 
 }
 
 hr{
@@ -439,12 +439,12 @@ hr{
 
 @media (max-width: 670px) {
     #especificacoesCard {
-        position: absolute; /* Posiciona o card fora do fluxo normal */
+        position: absolute; 
         top:  -30%;
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
-        width: 400px; /* Ajuste o tamanho do card, se necessário */
-        height: 185px; /* Altura automática */
+        left: 50%; 
+        transform: translateX(-42%); 
+        width: 400px;
+        height: 185px;
 }
 
     #especificacoesCard h5{
@@ -452,12 +452,12 @@ hr{
 }
 
     #especificacoesCard strong {
-        font-size: 9px; /* Tamanho fixo */
+        font-size: 9px;
         font-weight: 600;
 }
 
     #especificacoesCard p {
-        margin: 3px; /* Reduz o espaçamento entre os parágrafos */
+        margin: 3px;
         font-size: 8px; 
         font-weight: 300;
 }
@@ -470,12 +470,12 @@ hr{
 
 @media (max-width: 600px) {
     #especificacoesCard {
-        position: absolute; /* Posiciona o card fora do fluxo normal */
+        position: absolute;
         top:  -30%;
-        left: 51%; /* Centraliza horizontalmente */
-        transform: translateX(-42%); /* Ajusta para centralizar corretamente */
-        width: 350px; /* Ajuste o tamanho do card, se necessário */
-        height: 154px; /* Altura automática */
+        left: 51%;
+        transform: translateX(-42%); 
+        width: 350px;
+        height: 154px;
         padding: 10px;
 }
 
@@ -484,7 +484,7 @@ hr{
 }
 
     #especificacoesCard strong {
-        font-size: 7.5px; /* Tamanho fixo */
+        font-size: 7.5px;
         font-weight: 600;
 }
 
@@ -499,16 +499,16 @@ hr{
 
 /* Imagens */
 .img-fluid {
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-    margin-top: 10px; /* Espaçamento acima */
-    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.445); 
   }
 
 /*Fonte Título*/
 .card-title{
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: 700; /* Peso da fonte */
-    font-size: 1.6em; /* Tamanho da fonte */
+    font-family: "Roboto Flex", sans-serif; 
+    font-weight: 700; 
+    font-size: 1.6em;
 }
 
 .card-text{
@@ -516,30 +516,30 @@ hr{
 }
 
 .custom-card{
-    border-radius: 10px; /* Borda arredondada */
-    transform: scale(0.8); /* Reduz o tamanho do card */
-    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.274); /* Sombra suave */
+    border-radius: 10px;
+    transform: scale(0.8);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.274);
 }
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .card:hover {
-    transform: scale(0.9); /* Aumenta levemente o tamanho do card */
-    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.226); /* Adiciona sombra */
+    transform: scale(0.9);
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.226);
 }
 
 /*  PROPRIEDADES BOTÃO*/
 .btn-sm{
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: 600; /* Peso da fonte */
-    font-size: 1.1em;/* Tamanho da fonte */
-    margin: 10px 10px; /* Espaçamento interno */
-    box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445); /* Sombra suave */
+    font-family: "Roboto Flex", sans-serif; 
+    font-weight: 600; 
+    font-size: 1.1em;
+    margin: 10px 10px;
+    box-shadow:  3px 5px 8px rgba(0, 0, 0, 0.445);
 }
 
 @media (max-width: 768px) {
     .custom-card{
-        transform: scale(0.7); /* Reduz o tamanho do card */
+        transform: scale(0.7); 
         
     }
 }
@@ -547,15 +547,15 @@ hr{
 /* Modal */
 @media (max-width: 600px) {
     .modal-dialog {
-        max-width: 400px; /* Define o tamanho do modal para telas menores */
-        margin: 1.75rem auto; /* Ajusta o espaçamento */
+        max-width: 400px; 
+        margin: 1.75rem auto; 
     }
 }
 
 .form-label{
-    font-family: "Roboto Flex", sans-serif; /* Fonte principal */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1em; /* Tamanho da fonte */
+    font-family: "Roboto Flex", sans-serif; 
+    font-weight: 500; 
+    font-size: 1em; 
     margin-left: 3px;
 }
 
@@ -567,15 +567,15 @@ hr{
     justify-content: center;
     flex-direction: column;
     padding: 20px 20px;
-    background-color: #ffffff; /* Fundo branco */
-    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.432); /* Sombra semelhante ao header */
+    background-color: #ffffff; 
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.432); 
     gap: 5px;
     margin-top: 40px;
 }
 
 .footer-index p {
     font-family: "Roboto Flex", sans-serif;
-    font-size: 14px;
+    font-size: 1.2vw;
     color: #313131;
     margin: 0;
 }
@@ -588,12 +588,5 @@ hr{
 
 .footer-index a:hover {
     text-decoration: underline;
-}
-
-/* Responsividade para o Footer */
-@media (max-width: 768px) {
-    .footer-index {
-        text-align: center;
-    }
 }
 

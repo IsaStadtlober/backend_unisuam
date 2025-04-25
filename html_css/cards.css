@@ -7,13 +7,31 @@
     padding: 0;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 3vw;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 110px;
+    margin-bottom: 100px;
+    color: #000000ea;
+    background: linear-gradient(90deg ,transparent, #d4d4d460, transparent);
+    padding: 20px; 
+}
+
+@media (max-width: 850px) {
+    .section-title{
+        font-size: 4vw;
+        margin-bottom: 130px;
+    }
+}
+
 /* Estilo do corpo do card*/
 .card-body {
   background-color: white;
-  width: 70%;
+  width: 80%;
   height: auto;
   margin: auto;
-  margin-top: 150px;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.411);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -49,11 +67,11 @@
     margin-top: 30px;
 }
 
-.game-details h1 {
+.game-details h2 {
     font-size: 2.5vw; 
     letter-spacing: 3px;
     font-weight: bold;
-    color: #000; 
+    color: #000000e1; 
     white-space: nowrap; 
 }
 
@@ -67,7 +85,7 @@
     width: 150px; 
     font-size: 1.1vw;
     font-weight: bold;
-    color: #000;
+    color: #000000e1;
     white-space: nowrap;
     margin-left: 5px;
 }
@@ -98,19 +116,19 @@
 }
 
 /* Estilo para os textos do aside*/
-.requisitos-minimos h2,
-.requisitos-recomendados h2 {
+.requisitos-minimos h3,
+.requisitos-recomendados h3 {
     font-size: 1.7vw; 
     margin-bottom: 50px; 
     font-weight: 700;
-    color: #000;
+    color: #000000e1;
 }
 
 .requisitos-minimos strong,
 .requisitos-recomendados strong{
     font-size: 1.2vw; 
     font-weight: 600;
-    color: #000000;
+    color: #000000d8;
 }
 
 .requisitos-minimos p,
@@ -137,7 +155,7 @@ hr{
     text-align: center;
     margin: 50px 0px 30px 0px;
     letter-spacing: 1px;
-    color: #000000;
+    color: #000000e1;
 }
 
 .explicacao{
@@ -163,7 +181,7 @@ hr{
         width: 35%;
     }
 
-    .container .game-details h1{
+    .container .game-details h2{
         font-size: 2vw;
     }
 
@@ -195,7 +213,7 @@ hr{
         width: 40%;
     }
 
-    .container .game-details h1 {
+    .container .game-details h2 {
         text-align: center;
         font-size: 3vw;
     }
@@ -220,7 +238,7 @@ hr{
 
 @media (max-width: 850px) {
     /* Estilo para o article */
-    .game-details h1 {
+    .game-details h2 {
         font-size: 3vw;
     }
 
@@ -261,8 +279,8 @@ hr{
 
 
     /* Estilo para textos aside*/
-    .requisitos-minimos h2,
-    .requisitos-recomendados h2{
+    .requisitos-minimos h3,
+    .requisitos-recomendados h3{
         font-size: 2.5vw;
     }
 
@@ -304,7 +322,7 @@ hr{
     }
 
     /*Estilo do article*/
-    .game-details h1 {
+    .game-details h2 {
         font-size: 3.5vw;
     }
 }
