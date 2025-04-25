@@ -365,7 +365,7 @@
                 <p class="text-center fs-6">Complete com os seus dados para efetuar o login.</p>
                 <div class="modal-body">
                     <!-- Formulário de Login -->
-                    <form id="login-form">
+                    <form action="processar_login.php" method="POST" id="login-form">
                       <div class="mb-3">
                           <label for="email" class="form-label">E-mail:</label>
                           <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
@@ -410,7 +410,7 @@
             <p class="text-center fs-6 mb-3">Responda à pergunta de segurança para continuar.</p>
             <div class="modal-body">
               <!-- Pergunta de Segurança -->
-              <form id="second-factor-form">
+              <form action="processar_2fa.php" method="POST" id="second-factor-form">
                 <div class="mb-3">
                   <label for="security-answer" class="form-label">Qual o nome da sua mãe?</label>
                   <input type="text" id="security-answer" name="security-answer" class="form-control" placeholder="Digite a resposta" required>
