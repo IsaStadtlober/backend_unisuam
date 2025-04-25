@@ -104,3 +104,25 @@
     justify-content: space-between;
     gap: 15px;
 }
+
+/* Estilo do Modal de Sucesso */
+#successModal .modal-header {
+    background-color: transparent; /* Remove o fundo do cabeçalho */
+    border-bottom: none; /* Remove a borda inferior */
+    text-align: center;
+}
+
+#successModal .modal-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #28a745; /* Verde para o título */
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+#successModal .modal-body {
+    font-size: 1em;
+    font-weight: 500;
+    color: #4a4a4a; /* Preto mais claro para o texto */
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+}

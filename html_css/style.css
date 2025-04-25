@@ -544,7 +544,7 @@ hr{
     }
 }
 
-/* Modal */
+/* Modal LOGIN */
 @media (max-width: 600px) {
     .modal-dialog {
         max-width: 400px; 
@@ -558,6 +558,7 @@ hr{
     font-size: 1em; 
     margin-left: 3px;
 }
+
 
 
 /* Footer */
