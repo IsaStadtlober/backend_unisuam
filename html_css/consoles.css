@@ -1,5 +1,9 @@
 /*Consoles*/
 
+body {
+    overflow-x: hidden;
+}
+
 .consoles {
     display: flex;     
     flex-direction: column;         /* Define a exibição como flexbox */
@@ -637,7 +641,7 @@
     }
 }
 
-@media screen and (max-width: 794px) {
+@media screen and (max-width: 864px) {
     .consoles p.par_final {
         font-size: 15px;
         width: 500px;
@@ -647,7 +651,6 @@
 @media screen and (max-width: 768px) {
     .consoles {
         align-items: center;
-        padding: 5% 5%;
     }
     .consoles h1.primeiro_h1 {
         all: unset;
@@ -655,35 +658,37 @@
         letter-spacing: 7px;
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 28px;
+        font-size: 35px;
         font-optical-sizing: auto;
         font-weight: bolder;
         letter-spacing: 15px;
         margin-bottom: 2px;  
     }
     .consoles h1 {
-        font-size: 28px;
+        font-size: 35px;
         letter-spacing: 7px;
         text-align: center;
+        margin-top: 70px;
     }
     .consoles h2 {
         font-size: 16px;
         letter-spacing: 10px;
     }
     .consoles p {
-        font-size: 12px;
+        font-size: 15px;
         padding-bottom: 50px;
         text-align: center;
+        margin-top: 30px;
     }
     .containerV, .container2, .container3, .container4,
     .container5, .container6, .container7, .container8,
     .container9, .container10 {
         position: relative;
-        top: auto;
-        left: auto;
-        width: 80%;
-        height: auto;
-        margin: 20px auto;
+        top: -20px;
+        left: 100px;
+        width: 220px;
+        height: 220px;
+        margin: auto;
     }
     .linhadata, .linhaver, .linhaver2, .linhaver3, .linhaver4,
     .linhaver5, .linhaver6, .linhaver7, .linhaver8, .linhaver9,
@@ -691,10 +696,62 @@
         display: none;
     }
 
+    .data1, .data1_2, .data1_3 , .data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
+    }
+
     .consoles h1.cons_final {
         margin: auto;
-        margin-top: 50px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 30px;
     }
+
+    .consoles p.par_final {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .containerV, .container2, .container3, .container4,
+    .container5, .container6, .container7, .container8,
+    .container9, .container10 {
+        position: relative;
+        top: -20px;
+        width: 220px;
+        height: 220px;
+        margin: auto;
+        margin-left: 100px;
+    }
+
+    .consoles h1.cons_final {
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+
+    .consoles p.par_final {
+        font-size: 15px;
+        width: 400px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -715,5 +772,8 @@
         width: 90%;
         margin: 10px auto;
         
+    }
+    .data1, .data1_2, .data1_3 , .data1_4, .data1_5, .data1_6, .data1_7, .data1_8, .data1_9, .data1_10 {
+        display: none;
     }
 }
