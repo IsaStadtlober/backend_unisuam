@@ -15,9 +15,9 @@
         <h1>Start Play</h1>
         <a href="#"></a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="card.html">Games</a>
-            <a href="videogame.html">Consoles</a>
+            <a href="index.php">Home</a>
+            <a href="card.php">Games</a>
+            <a href="videogame.php">Consoles</a>
         </nav>
         <form class="search-bar">
           <input type="text" placeholder="Pesquisar..." />
@@ -240,7 +240,7 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                    <p class="mb-1 fs-6">Não tem uma conta? <a href="cadastro.html" class="text-primary">Cadastre-se aqui.</a></p>
+                    <p class="mb-1 fs-6">Não tem uma conta? <a href="cadastro.php" class="text-primary">Cadastre-se aqui.</a></p>
                     <p class="mb-1 fs-6">Esqueceu a Senha? <a href="#" class="text-primary">Mudar aqui.</a></p>
                 </div>
             </div>
@@ -269,7 +269,7 @@
                   <input type="text" id="security-answer" name="security-answer" class="form-control" placeholder="Digite a resposta" required>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-outline-primary w-75 mt-3">Enviar</button>
+                    <button type="submit" class="btn btn-outline-primary w-75 mt-3">Enviar</button>
                 </div>
               </form>
             </div>

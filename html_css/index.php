@@ -14,9 +14,9 @@
         <h1>Start Play</h1>
         <a href="#"></a>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="card.html">Games</a>
-          <a href="videogame.html">Consoles</a>
+          <a href="index.php">Home</a>
+          <a href="card.php">Games</a>
+          <a href="videogame.php">Consoles</a>
         </nav>
         <form class="search-bar">
           <input type="text" placeholder="Pesquisar..." />
@@ -24,7 +24,7 @@
       </form>
       <div class="auth-buttons">
         <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</button>
-        <button onclick="location.href='cadastro.html'">Cadastro</button>
+        <button onclick="location.href='cadastro.php'">Cadastro</button>
     </div>
     </header>
 
@@ -180,7 +180,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Jogos Indies:</h5>
                         <p class="card-text">Originalidade e <br>inovação.</p>
-                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.html#card-indie'">QUERO CONHECER</button>
+                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.php#card-indie'">QUERO CONHECER</button>
                     </div>
                 </div>
             </article>
@@ -195,7 +195,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Jogos AAA:</h5>
                         <p class="card-text">O ápice da produção, o sucesso em escala global.</p>
-                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.html#card-aaa'">QUERO CONHECER</button>
+                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.php#card-aaa'">QUERO CONHECER</button>
                     </div>
                 </div>
             </article>
@@ -210,7 +210,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Recordes e Legado:</h5>
                         <p class="card-text">A história dos jogos mais vendidos.</p>
-                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.html#card-vendidos'">QUERO CONHECER</button>
+                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='card.php#card-vendidos'">QUERO CONHECER</button>
                     </div>
                 </div>
             </article>
@@ -225,7 +225,7 @@
                     <div class="card-body">
                         <h5 class="card-title">História dos jogos:</h5>
                         <p class="card-text">A paixão que moldou a indústria.</p>
-                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='videogame.html'">QUERO CONHECER</button>
+                        <button class="btn btn-secondary btn-sm rounded-pill" onclick="location.href='videogame.php'">QUERO CONHECER</button>
                     </div>
                 </div>
             </article>
@@ -276,7 +276,7 @@
                 </form>
               </div>
               <div class="modal-footer">
-                  <p class="mb-1 fs-6">Não tem uma conta? <a href="cadastro.html" class="text-primary">Cadastre-se aqui.</a></p>
+                  <p class="mb-1 fs-6">Não tem uma conta? <a href="cadastro.php" class="text-primary">Cadastre-se aqui.</a></p>
                   <p class="mb-1 fs-6">Esqueceu a Senha? <a href="#" class="text-primary">Mudar aqui.</a></p>
               </div>
           </div>
