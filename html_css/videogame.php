@@ -25,7 +25,7 @@
       </form>
       <div class="auth-buttons">
         <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</button>
-        <button onclick="location.href='cadastro.html'">Cadastro</button>
+        <button onclick="location.href='cadastro.php'">Cadastro</button>
     </div>
     </header>
     <main>
