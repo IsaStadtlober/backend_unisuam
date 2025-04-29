@@ -233,7 +233,7 @@
       </section>
 
       <footer class="footer-index bg-light mt-5">
-        <div class="container">
+        <div class="container1">
           <div class="row justify-content-center align-items-center gap-5">
             <!-- Primeira Coluna -->
             <div class="col-md-5 text-start pt-5">
