@@ -232,26 +232,26 @@
         </div>
       </section>
 
-      <footer class="footer-index">
-        <div class="footer-container">
-          <!-- Primeira Coluna -->
-          <div class="footer-column">
-            <p><strong>Starplay</strong> é sua fonte completa de conhecimento sobre games. Nosso objetivo é direto: oferecer informações precisas e guias práticos para todos os jogadores. Encontre tudo o que você precisa para dominar seus jogos favoritos em um só lugar.</p>
-            <p><strong>Starplay:</strong> Game On, Knowledge Up!</p>
+      <footer class="footer-index bg-light">
+        <div class="container">
+          <div class="row justify-content-center align-items-center gap-5">
+            <!-- Primeira Coluna -->
+            <div class="col-md-5 text-start pt-5">
+              <p><strong>Starplay</strong> é sua fonte completa de conhecimento sobre games. Nosso objetivo é direto: oferecer informações precisas e guias práticos para todos os jogadores. Encontre tudo o que você precisa para dominar seus jogos favoritos em um só lugar.</p>
+              <p><strong>Starplay: Game On, Knowledge Up!</strong></p>
+            </div>
+            <!-- Segunda Coluna -->
+            <div class="col-md-5 text-start pt-2">
+              <h5>Contatos:</h5>
+              <p><strong>Email:</strong> emailficticostarplay@gmail.com</p>
+              <p><strong>Número:</strong> (99) 99999-9999</p>
+            </div>
           </div>
-          <!-- Barra Separadora -->
-          <div class="footer-divider"></div>
-          <!-- Segunda Coluna -->
-          <div class="footer-column">
-            <h5>Contatos:</h5>
-            <p><strong>Email:</strong> emailficticostarplay@gmail.com</p>
-            <p><strong>Número:</strong> (99) 99999-9999</p>
+          <!-- Parte de Baixo -->
+          <div class="text-center mt-5 mb-1">
+            <p>&copy; 2025 StarPlay. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <strong>Equipe Starplay.</strong></p>
           </div>
-        </div>
-        <!-- Parte de Baixo -->
-        <div class="footer-bottom">
-          <p>&copy; 2025 Star Play. Todos os direitos reservados.</p>
-          <p>Desenvolvido por <strong>Sua equipe</strong></p>
         </div>
       </footer>
     </main>
