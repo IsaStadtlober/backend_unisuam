@@ -45,6 +45,7 @@
                 </div>
             </div>
             <!-- Formulário de cadastro -->
+            <form action="" method="POST" id="cadastro-form">
                 <!-- Nome Completo -->
                 <section class="mb-4">
                     <label for="nome_completo" class="form-label">Nome Completo:</label>
@@ -250,7 +251,7 @@
                     <input type="email" id="email" name="email" class="form-control" placeholder="exemplo@email.com" required>
                     <?php
                         function validarEmail($email) {
-                            $regex = "/^[^0-9][A-z0-9_]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/";
+                            $regex = "/^[a-zA-Z0-9._-]+@(gmail|hotmail|outlook|yahoo)\.com$/";
                             if (empty($email)){
                                 return "O email é obrigatótio";
                             }
