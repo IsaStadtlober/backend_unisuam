@@ -233,8 +233,26 @@
       </section>
 
       <footer class="footer-index">
-        <p>&copy; 2025 Start Play. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <a href="#">StartPlay</a></p>
+        <div class="footer-container">
+          <!-- Primeira Coluna -->
+          <div class="footer-column">
+            <p><strong>Starplay</strong> é sua fonte completa de conhecimento sobre games. Nosso objetivo é direto: oferecer informações precisas e guias práticos para todos os jogadores. Encontre tudo o que você precisa para dominar seus jogos favoritos em um só lugar.</p>
+            <p><strong>Starplay:</strong> Game On, Knowledge Up!</p>
+          </div>
+          <!-- Barra Separadora -->
+          <div class="footer-divider"></div>
+          <!-- Segunda Coluna -->
+          <div class="footer-column">
+            <h5>Contatos:</h5>
+            <p><strong>Email:</strong> emailficticostarplay@gmail.com</p>
+            <p><strong>Número:</strong> (99) 99999-9999</p>
+          </div>
+        </div>
+        <!-- Parte de Baixo -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Star Play. Todos os direitos reservados.</p>
+          <p>Desenvolvido por <strong>Sua equipe</strong></p>
+        </div>
       </footer>
     </main>
 
