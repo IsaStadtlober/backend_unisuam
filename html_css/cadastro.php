@@ -76,7 +76,7 @@
                             if ($mensagem) {
                                 echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                             } else {
-                                echo '<p style="color: green;">O nome é válido!</p>'; // Mensagem de sucesso.
+                                echo '<p style="color: #0d6efd;">O nome é válido!</p>'; // Mensagem de sucesso.
                             }
                         }
                     ?>
@@ -101,7 +101,7 @@
                                 // Calcula idade e verifica
                                 $idade = calcularIdade($data_nascimento);
                                 if ($idade > 18 && $idade < 80) {
-                                    echo '<p class="text-success">A idade é valida.</p>';
+                                    echo '<p style="color: #0d6efd;>A idade é valida.</p>';
                                 } elseif ($idade <= 18) {
                                     echo '<p class="text-danger">A idade é inválida, pois é menor de 18 anos.</p>';
                                 } else {
@@ -113,14 +113,17 @@
                     <div class="col-md-6 mb-3">
                         <label for="sexo" class="form-label">Sexo:</label>
                         <select id="sexo" name="sexo" class="form-select" required>
-                            <option value="">Selecione</option>
+                            <option value="S">Selecione</option>
                             <option value="masculino">Masculino</option>
                             <option value="feminino">Feminino</option>
                             <option value="outro">Outro</option>
                             <?php
                                 function validarSexo($sexo){
-                                if (($sexo != "masculino") && ($sexo != "feminino") && ($sexo != "outro")){
+                                /*if (($sexo != "masculino") && ($sexo != "feminino") && ($sexo != "outro")){
                                     return "Selecione um gênero";
+                                } VER ISSO AQUI*/
+                                if($sexo == "S"){
+                                    return "Selecione um genêro";
                                 }
                                 return null;
                                 }
@@ -133,7 +136,7 @@
                                     if ($mensagem) {
                                         echo '<p style="color: red;">' . $mensagem . '</p>'; // Exibe todos os erros
                                     } else {
-                                        echo '<p style="color: green;">O gênero é válido!</p>'; // Mensagem de sucesso
+                                        echo '<p style="color: #0d6efd;">O gênero é válido!</p>'; // Mensagem de sucesso
                                     }
                                 }
                             ?>
@@ -170,7 +173,7 @@
                             if ($mensagem) {
                                 echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                             } else {
-                                echo '<p style="color: green;">O nome materno é válido!</p>'; // Mensagem de sucesso.
+                                echo '<p style="color: #0d6efd;">O nome materno é válido!</p>'; // Mensagem de sucesso.
                             }
                         }
                     ?>
@@ -237,12 +240,10 @@
                         if ($mensagem) {
                             echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                         } else {
-                            echo '<p style="color: green;">O CPF é válido!</p>'; // Mensagem de sucesso.
+                            echo '<p style="color: #0d6efd;">O CPF é válido!</p>'; // Mensagem de sucesso.
                         }
                     }
                 ?>
-
-
                 </section>
 
                 <!-- E-mail -->
@@ -270,7 +271,7 @@
                             if ($mensagem) {
                                 echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                             } else {
-                                echo '<p style="color: green;">O Email é válido!</p>'; // Mensagem de sucesso.
+                                echo '<p style="color: #0d6efd;">O Email é válido!</p>'; // Mensagem de sucesso.
                             }
                         }
 
@@ -304,7 +305,7 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                                 } else {
-                                    echo '<p style="color: green;">O CPF é válido!</p>'; // Mensagem de sucesso.
+                                    echo '<p style="color: #0d6efd;">O CPF é válido!</p>'; // Mensagem de sucesso.
                                 }
                             }
                         ?>
@@ -335,11 +336,10 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                                 } else {
-                                    echo '<p style="color: green;">O CPF é válido!</p>'; // Mensagem de sucesso.
+                                    echo '<p style="color: #0d6efd;">O CPF é válido!</p>'; // Mensagem de sucesso.
                                 }
                             }
                     ?>
-                    
                     </div>
                 </section>
 
@@ -368,7 +368,7 @@
                                     if ($mensagem){
                                         echo '<p style="color: red;">'. $mensagem .'</p>';
                                     }else{
-                                        echo '<p style="color: green;">O Endereço é válido!</p>';
+                                        echo '<p style="color: #0d6efd;">O Endereço é válido!</p>';
                                     }
                                 }
                         ?>
@@ -395,12 +395,11 @@
 
                                 // Exibir a mensagem de erro ou sucesso
                                 if ($mensagem) {
-                                    echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
+                                    echo '<p style="color: red;">' . $mensagem . '</p>'; //Mensagem de erro.
                                 } else {
-                                    echo '<p style="color: green;">O CEP é válido!</p>'; // Mensagem de sucesso.
+                                    echo '<p style="color: #0d6efd;">O CEP é válido!</p>'; // Mensagem de sucesso.
                                 }
                             }
-                            
                         ?>
                     </div>
                 </section>
@@ -493,7 +492,7 @@
                             if ($mensagem) {
                                 echo '<p style="color: red;">' . $mensagem . '</p>'; // Exibe todos os erros
                             } else {
-                                echo '<p style="color: green;">O login é válido!</p>'; // Mensagem de sucesso
+                                echo '<p style="color: #0d6efd;">O login é válido!</p>'; // Mensagem de sucesso
                             }
                         }
                     ?>
@@ -527,7 +526,7 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">' . $mensagem . '</p>'; // Exibe todos os erros
                                 } else {
-                                    echo '<p style="color: green;">Senha validada!</p>'; // Mensagem de sucesso
+                                    echo '<p style="color: #0d6efd;">Senha validada!</p>'; // Mensagem de sucesso
                                 }
                             }
                         ?>
@@ -554,7 +553,7 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">'. $mensagem. '</p>'; // Exibe todos os erros
                                 } else {
-                                    echo '<p style="color: green;">As senhas são iguais!</p>'; // Mensagem de sucesso
+                                    echo '<p style="color: #0d6efd;">As senhas são iguais!</p>'; // Mensagem de sucesso
                                 }
                             }
                         ?>
