@@ -45,7 +45,7 @@
                 </div>
             </div>
             <!-- Formulário de cadastro -->
-            <form method="POST" id="cadastro-form">
+            <form action="" method="POST" id="cadastro-form">
                 <!-- Nome Completo -->
                 <section class="mb-4">
                     <label for="nome_completo" class="form-label">Nome Completo:</label>
