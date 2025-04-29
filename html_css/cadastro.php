@@ -119,9 +119,9 @@
                             <option value="outro">Outro</option>
                             <?php
                                 function validarSexo($sexo){
-                                /*if (($sexo != "masculino") && ($sexo != "feminino") && ($sexo != "outro")){
+                                if (($sexo != "masculino") && ($sexo != "feminino") && ($sexo != "outro")){
                                     return "Selecione um gênero";
-                                } VER ISSO AQUI*/
+                                }
                                 if($sexo == "S"){
                                     return "Selecione um genêro";
                                 }

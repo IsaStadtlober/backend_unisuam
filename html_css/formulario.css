@@ -105,7 +105,7 @@
     gap: 15px;
 }
 
-/* Estilo do Modal de Sucesso
+/*Estilo do Modal de Sucesso*/
 #successModal .modal-header {
     background-color: transparent;
     border-bottom: none;
@@ -125,4 +125,4 @@
     color: #4a4a4a; 
     text-align: center;
     font-family: 'Roboto Flex', sans-serif;
-} */
+}
