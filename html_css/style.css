@@ -590,7 +590,6 @@ hr{
 
 .footer-column p{
     margin: 1px;
-    font-size: 0.9em;
 }
 
 .footer-index .footer-column + .footer-column {
@@ -605,10 +604,8 @@ hr{
 
 .footer-index .footer-bottom p {
     margin: 0;
-    font-size: 0.8em;
 }
 
 .footer-index strong{
     font-weight: 700;
-    font-size: 1.1em;
 }
