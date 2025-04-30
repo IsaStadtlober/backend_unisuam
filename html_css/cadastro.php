@@ -101,11 +101,11 @@
                                 // Calcula idade e verifica
                                 $idade = calcularIdade($data_nascimento);
                                 if ($idade > 18 && $idade < 80) {
-                                    echo '<p style="color: #0d6efd;>A idade é valida.</p>';
-                                } elseif ($idade <= 18) {
-                                    echo '<p class="text-danger">A idade é inválida, pois é menor de 18 anos.</p>';
+                                    echo '<p style="color: #0d6efd;">A idade é valida.</p>';
+                                } elseif ($idade < 18) {
+                                    echo '<p style="color:rgb(253, 13, 13);">A idade é inválida, pois é menor de 18 anos.</p>';
                                 } else {
-                                    echo '<p class="text-warning">A idade é inválida, pois excede a idade de 80 anos.</p>';
+                                    echo '<p style="color:rgb(253, 13, 13);">A idade é inválida, pois excede a idade de 80 anos.</p>';
                                 }
                             }
                         ?>
@@ -285,7 +285,7 @@
                         <input type="tel" id="telefone_celular" name="telefone_celular" class="form-control" maxlength="17" placeholder="(+55)XX-XXXXXXXXX" required>
                         <?php
                             function validarCelular($celular) {
-                                $regexCelular = '/^\(\+55\) \d{2}-\d{9}$/'; //Regex para Formatação (+55) xx-xxxxxxxxx
+                                $regexCelular = '/\(\d{2}\)\d{5}-\d{4}$/'; //Regex para Formatação (+55) xx-xxxxxxxxx
 
                                 if (empty($celular)) {
                                     return "O campo celular é obrigatório.";
@@ -305,7 +305,7 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                                 } else {
-                                    echo '<p style="color: #0d6efd;">O CPF é válido!</p>'; // Mensagem de sucesso.
+                                    echo '<p style="color: #0d6efd;">O número de celular é válido!</p>'; // Mensagem de sucesso.
                                 }
                             }
                         ?>
