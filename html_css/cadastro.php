@@ -270,16 +270,16 @@
                 <section class="row">
                     <div class="col-md-6 mb-3">
                         <label for="telefone_celular" class="form-label">Telefone Celular:</label>
-                        <input type="tel" id="telefone_celular" name="telefone_celular" class="form-control" maxlength="17" placeholder="(+55)XX-XXXXXXXXX" required>
+                        <input type="tel" id="telefone_celular" name="telefone_celular" class="form-control" maxlength="22" placeholder="(+xx)(xx)xxxxx-xxxx" required>
                         <?php
                             function validarCelular($celular) {
-                                $regexCelular = '/\(\d{2}\)\d{5}-\d{4}$/'; //Regex para Formatação (+55) xx-xxxxxxxxx
+                                $regexCelular = '/\(\+\d{2}\)\(\d{2}\)\d{5}-\d{4}$/'; //Regex para Formatação (+xx)(xx)xxxxx-xxxx
 
                                 if (empty($celular)) {
                                     return "O campo celular é obrigatório.";
                                 }
                                 if (!preg_match($regexCelular, $celular)) {
-                                    return "O número de celular não está em um formato válido. Use o formato (xx) xxxxx-xxxx.";
+                                    return "O número de celular não está em um formato válido. Use o formato (+xx)(xx)xxxxx-xxxx.";
                                 }
                                 return null;
                             }
@@ -300,16 +300,16 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="telefone_fixo" class="form-label">Telefone Fixo:</label>
-                        <input type="tel" id="telefone_fixo" name="telefone_fixo" class="form-control" maxlength="16" placeholder="(+55)XX-XXXXXXXXX" required>
+                        <input type="tel" id="telefone_fixo" name="telefone_fixo" class="form-control" maxlength="22" placeholder="(+xx)(xx)xxxx-xxxx" required>
                         <?php
                             function validarFixo($telefone) {
-                                $regexTelefone = '/\(\d{2}\)\d{4}-\d{4}$/'; //Regex para Formatação (+55) xx-xxxxxxxx
+                                $regexTelefone = '/\(\+\d{2}\)\(\d{2}\)\d{4}-\d{4}$/'; //Regex para Formatação (+xx)(xx)xxxx-xxxx
 
                                 if (empty($telefone)) {
                                     return "O campo telefone é obrigatório.";
                                 }
                                 if (!preg_match($regexTelefone, $telefone)) {
-                                    return "O número de telefone não está em um formato válido. Use o formato (xx) xxxx-xxxx.";
+                                    return "O número de telefone não está em um formato válido. Use o formato (+xx)(xx)xxxx-xxxx.";
                                 }
                                 return null;
                             }
@@ -324,7 +324,7 @@
                                 if ($mensagem) {
                                     echo '<p style="color: red;">' . $mensagem . '</p>'; // Mensagem de erro.
                                 } else {
-                                    echo '<p style="color: #0d6efd;">O CPF é válido!</p>'; // Mensagem de sucesso.
+                                    echo '<p style="color: #0d6efd;">O número de telefone é válido!</p>'; // Mensagem de sucesso.
                                 }
                             }
                     ?>
@@ -411,7 +411,7 @@
                                 $regexNumero = '/^[0-9]+$/'; // Regex para validar apenas números
 
                                 if(!preg_match($regexNumero, $numero)){
-                                    echo '<p style="color: red;">O número deve conter apenas dígitos.</p>';
+                                    echo '<p style="color: red;">Este campo deve apenas conter caracteres numéricos.</p>';
                                 }else{
                                     echo '<p style="color: #0d6efd;">O número é válido!</p>';
                                 }
@@ -489,12 +489,11 @@
                         <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Digite seu bairro" required>
                         <?php
                             function validarBairro($bairro){
-                                $regexBairro = '/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/';
 
                                 if(empty($bairro)){
                                     return "Este campo é obrigatório";
                                 }
-                                if(!preg_match($regexBairro, $bairro)){
+                                if(strlen($bairro) < 5){
                                     return "Bairro inválido";
                                 }
                             }
