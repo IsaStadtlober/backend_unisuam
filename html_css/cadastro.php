@@ -113,34 +113,22 @@
                     <div class="col-md-6 mb-3">
                         <label for="sexo" class="form-label">Sexo:</label>
                         <select id="sexo" name="sexo" class="form-select" required>
-                            <option value="S">Selecione</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="outro">Outro</option>
-                            <?php
-                                function validarSexo($sexo){
-                                if (($sexo != "masculino") && ($sexo != "feminino") && ($sexo != "outro")){
-                                    return "Selecione um gênero";
-                                }
-                                if($sexo == "S"){
-                                    return "Selecione um genêro";
-                                }
-                                return null;
-                                }
-                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                    $sexo = $_POST['sexo'];
-
-                                    // Variável para acumular mensagens de erro
-                                    $mensagem = validarSexo($sexo);
-                                    // Exibir as mensagens de erro, ou sucesso se estiver tudo correto
-                                    if ($mensagem) {
-                                        echo '<p style="color: red;">' . $mensagem . '</p>'; // Exibe todos os erros
-                                    } else {
-                                        echo '<p style="color: #0d6efd;">O gênero é válido!</p>'; // Mensagem de sucesso
-                                    }
-                                }
-                            ?>
+                            <option value="s" name = "s">Selecione</option>
+                            <option value="masculino" name = "masculino">Masculino</option>
+                            <option value="feminino" name = "feminino">Feminino</option>
+                            <option value="outro" name = "outro">Outro</option>
                         </select>
+                        <?php
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                $sexo = $_POST['sexo'];
+                                
+                                if ($sexo == "s") {
+                                    echo '<p style="color: red;">O campo sexo é obrigatório.</p>';
+                                } else {
+                                    echo '<p style="color: #0d6efd;">Sexo selecionado!</p>';
+                                }
+                            }
+                        ?>
                     </div>
                 </section>
 
@@ -258,7 +246,7 @@
                             }
                             
                             if(!preg_match($regex, $email)){
-                                return "O email deve ser preechido corretamente";
+                                return "O email é Inválido";
                             }
                             return null;
                         }
@@ -291,7 +279,7 @@
                                     return "O campo celular é obrigatório.";
                                 }
                                 if (!preg_match($regexCelular, $celular)) {
-                                    return "O número de celular não está em um formato válido. Use o formato (+55) xx-xxxxxxxxx.";
+                                    return "O número de celular não está em um formato válido. Use o formato (xx) xxxxx-xxxx.";
                                 }
                                 return null;
                             }
@@ -315,13 +303,13 @@
                         <input type="tel" id="telefone_fixo" name="telefone_fixo" class="form-control" maxlength="16" placeholder="(+55)XX-XXXXXXXXX" required>
                         <?php
                             function validarFixo($telefone) {
-                                $regexTelefone = '/^\(\+55\) \d{2}-\d{8}$/'; //Regex para Formatação (+55) xx-xxxxxxxx
+                                $regexTelefone = '/\(\d{2}\)\d{4}-\d{4}$/'; //Regex para Formatação (+55) xx-xxxxxxxx
 
                                 if (empty($telefone)) {
                                     return "O campo telefone é obrigatório.";
                                 }
                                 if (!preg_match($regexTelefone, $telefone)) {
-                                    return "O número de telefone não está em um formato válido. Use o formato (+55) xx-xxxxxxxx.";
+                                    return "O número de telefone não está em um formato válido. Use o formato (xx) xxxx-xxxx.";
                                 }
                                 return null;
                             }
@@ -353,24 +341,24 @@
                                 if(empty($endereco)){
                                     return "Este campo é obrigatório";
                                 }
-                                if(strlen($endereco) > 20){
+                                if(strlen($endereco) < 20){
                                     return "Endereço Inválido";
                                 }
                                 return null;
                             }
-                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                    $endereco = $_POST['endereco'];
-                                    
-                                    // Variável para acumular mensagens de erro
-                                    $mensagem = validarEndereco($endereco);
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                $endereco = $_POST['endereco'];
+                                   
+                                // Variável para acumular mensagens de erro
+                                $mensagem = validarEndereco($endereco);
 
-                                    // Exibir a mensagem de erro ou sucesso
-                                    if ($mensagem){
-                                        echo '<p style="color: red;">'. $mensagem .'</p>';
-                                    }else{
-                                        echo '<p style="color: #0d6efd;">O Endereço é válido!</p>';
-                                    }
+                                // Exibir a mensagem de erro ou sucesso
+                                if ($mensagem){
+                                    echo '<p style="color: #FF0000;">'. $mensagem .'</p>';
+                                }else{
+                                    echo '<p style="color: #0d6efd;">O Endereço é válido!</p>';
                                 }
+                            }
                         ?>
                     </div>
                     <div class="col-md-4 mb-3">
@@ -417,6 +405,18 @@
                     <div class="col-md-6 mb-3">
                         <label for="numero" class="form-label">Número:</label>
                         <input type="text" id="numero" name="numero" class="form-control" placeholder="Nº" required>
+                        <?php
+                            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                                $numero = $_POST['numero'];
+                                $regexNumero = '/^[0-9]+$/'; // Regex para validar apenas números
+
+                                if(!preg_match($regexNumero, $numero)){
+                                    echo '<p style="color: red;">O número deve conter apenas dígitos.</p>';
+                                }else{
+                                    echo '<p style="color: #0d6efd;">O número é válido!</p>';
+                                }
+                            }
+                        ?>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="uf" class="form-label">UF:</label>
@@ -458,10 +458,58 @@
                     <div class="col-md-6 mb-3">
                         <label for="cidade" class="form-label">Cidade:</label>
                         <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Digite sua cidade" required>
+                        <?php
+                            function validarCidade($cidade){
+                                $regexCidade = '/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/';
+
+                                if(empty($cidade)){
+                                    return "Este campo é obrigatório";
+                                }
+                                if(!preg_match($regexCidade, $cidade)){
+                                    return "Cidade inválida";
+                                }
+                            }
+
+                           if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                                $cidade = $_POST['cidade'];
+
+                                $mensagem = validarCidade($cidade);
+
+                                if($mensagem){
+                                    echo '<p style ="color = #FF0000;">'. $mensagem .'</p>';
+                                }else{
+                                    echo '<p style="color: #0d6efd;">A Cidade é válida!</p>';
+                                }
+                            }
+                            
+                        ?>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="bairro" class="form-label">Bairro:</label>
                         <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Digite seu bairro" required>
+                        <?php
+                            function validarBairro($bairro){
+                                $regexBairro = '/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/';
+
+                                if(empty($bairro)){
+                                    return "Este campo é obrigatório";
+                                }
+                                if(!preg_match($regexBairro, $bairro)){
+                                    return "Bairro inválido";
+                                }
+                            }
+                            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                                $bairro = $_POST['bairro'];
+
+                                $mensagem = validarBairro($bairro);
+
+                                if($mensagem){
+                                    echo '<p style ="color = #FF0000;">'. $mensagem .'</p>';
+                                }else{
+                                    echo '<p style="color: #0d6efd;">O Bairro é válido!</p>';
+                                }
+                            }
+                        ?>
                     </div>
                 </section>
 
