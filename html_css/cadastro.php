@@ -307,12 +307,12 @@
                 <section class="row">
                     <div class="col-md-8 mb-3">
                         <label for="endereco" class="form-label">Endereço:</label>
-                        <input type="text" id="endereco" name="endereco" class="form-control" value="<?php echo htmlspecialchars($dados['endereco'] ?? '') ?>"  onkeyup="buscarDadosCep()" onblur="buscarDadosCep()" placeholder="Digite seu endereço" required>
+                        <input type="text" id="endereco" name="endereco" class="form-control" value="<?php echo htmlspecialchars($dados['endereco'] ?? '') ?>" placeholder="Digite seu endereço" required>
                         <p style="color: red;"><?php echo $erros["endereco"] ?? ""; ?></p>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="cep" class="form-label">CEP:</label>
-                        <input type="text" id="cep" name="cep" class="form-control" maxlength="9" value="<?php echo htmlspecialchars($dados ['cep'] ?? '') ?>" placeholder="00000-000" required>
+                        <input type="text" id="cep" name="cep" class="form-control" maxlength="9" value="<?php echo htmlspecialchars($dados ['cep'] ?? '') ?>" oninput="buscarCep()" placeholder="00000-000" required>
                         <p style="color: red;"><?php echo $erros["cep"] ?? ""; ?></p>
                     </div>
                 </section>
@@ -512,34 +512,36 @@
           });
         });
     </script>
-    <script> 
-        async function buscarDadosCep() {
-            let cep = document.getElementById("cep").value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    <script>
+        let timeout = null; // Variável para controlar o tempo de espera antes da requisição
 
-            if (cep.length === 8) { // Confirma que o CEP tem 8 números
-                try {
-                    let response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-                    if (!response.ok) throw new Error("Erro na requisição");
-                    
-                    let data = await response.json();
+        function buscarCep() {
+            clearTimeout(timeout); // Limpa o timeout anterior para evitar múltiplas chamadas
 
-                    if (!data.erro) {
-                        document.getElementById("cidade").value = data.localidade || "";
-                        document.getElementById("bairro").value = data.bairro || "";
-                        document.getElementById("uf").value = data.uf || "";
-                        document.getElementById("endereco").value = data.logradouro || "";
-                    } else {
-                        alert("CEP não encontrado.");
+            timeout = setTimeout(async () => {
+                let cep = document.getElementById("cep").value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+                if (cep.length === 8) { // Confirma que o CEP tem 8 números
+                    try {
+                        let response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                        if (!response.ok) throw new Error("Erro na requisição");
+
+                        let data = await response.json();
+
+                        if (!data.erro) {
+                            document.getElementById("cidade").value = data.localidade || "";
+                            document.getElementById("bairro").value = data.bairro || "";
+                            document.getElementById("uf").value = data.uf || "";
+                            document.getElementById("endereco").value = data.logradouro || "";
+                        } else {
+                            console.warn("CEP não encontrado.");
+                        }
+                    } catch (error) {
+                        console.error("Erro ao buscar CEP:", error);
                     }
-                } catch (error) {
-                    console.error("Erro ao buscar CEP:", error);
-                    alert("Erro ao buscar CEP. Tente novamente!");
                 }
-            } else {
-                alert("Digite um CEP válido.");
-            }
+            }, 100); // Aguarda 500ms antes de fazer a requisição para evitar chamadas excessivas
         }
-
     </script>
     <script src="https://unpkg.com/imask"></script>
     <script src="js/mascara.js"></script>      
