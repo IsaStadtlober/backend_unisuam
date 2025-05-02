@@ -29,7 +29,7 @@
     font-family: 'Roboto Flex', sans-serif;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 400px) {
     .container {
         width: 90%;
     }
@@ -103,26 +103,4 @@
     display: flex;
     justify-content: space-between;
     gap: 15px;
-}
-
-/*Estilo do Modal de Sucesso*/
-#successModal .modal-header {
-    background-color: transparent;
-    border-bottom: none;
-    text-align: center;
-}
-
-#successModal .modal-title {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #28a745; 
-    font-family: 'Roboto Flex', sans-serif;
-}
-
-#successModal .modal-body {
-    font-size: 1em;
-    font-weight: 500;
-    color: #4a4a4a; 
-    text-align: center;
-    font-family: 'Roboto Flex', sans-serif;
 }

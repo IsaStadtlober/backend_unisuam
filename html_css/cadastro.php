@@ -207,6 +207,7 @@
                             }
                         }
                         return ["erro" => "Erro ao acessar a API ViaCEP."];
+                        
                     }
 
                     // Validando os campos e armazenando mensagens de erro
@@ -221,24 +222,30 @@
                     $erros["numero"] = validarNumero($dados["numero"]);
                     $erros["login"] = validarLogin($dados["login"]);
                     $erros["senha"] = validarSenha($dados["senha"], $dados["confirmar_senha"]);
-
                     // Se o CEP for válido, busca os dados da API
-                    if (!$erros["cep"]) {
-                        $resultadoCep = buscarCep($dados["cep"]);
-                        if (isset($resultadoCep["erro"])) {
-                            $erros["cep"] = $resultadoCep["erro"];
-                        } else {
-                            $dados["cidade"] = $resultadoCep["cidade"];
-                            $dados["bairro"] = $resultadoCep["bairro"];
-                        }
-                    }
 
-                    // Se não houver erros, redireciona para a página de sucesso
+                    // Se não houver erros, exibe o modal de sucesso
                     if (empty(array_filter($erros))) {
-                        header("Location: sucesso.php"); // Redireciona para a página de sucesso
-                        exit();
+                        echo "
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Exibe o modal
+                                var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                                successModal.show();
+                    
+                                // Redireciona automaticamente após 5 segundos
+                                setTimeout(function () {
+                                    window.location.href = 'index.php';
+                                }, 5000);
+                    
+                                // Cancela o redirecionamento automático se o modal for fechado manualmente
+                                document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+                                    window.location.href = 'index.php';
+                                });
+                            });
+                        </script>";
                     }
-                 }
+                }
              ?>
             <form action="" method="POST" id="cadastro-form">
                 <!-- Nome Completo -->
@@ -414,6 +421,21 @@
         </section>
     </main>
 
+    <!-- Modal de Cadastro Realizado -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4 py-2">
+                <!-- Botão de Fechar no canto superior direito -->
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                <!-- Conteúdo do Modal -->
+                <div class="modal-body text-center">
+                    <h2 class="modal-title fs-3 text-success" id="successModalLabel">Cadastro Realizado</h2>
+                    <p class="fs-5 mt-3">Seu cadastro foi concluído com sucesso!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal 1: Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -488,6 +510,8 @@
           </div>
         </div>
     </div>
+
+    
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
