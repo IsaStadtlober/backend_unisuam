@@ -113,9 +113,11 @@
                         if ($soma == 10 || $soma == 11) {
                             $soma = 0;
                         }
+                        
                         if ($soma != $cpf[9]) {
                             return "CPF inválido, de acordo com o Primeiro dígito verificador";
                         }
+
                         //Segundo dígito verificador
                         $soma = 0;
                         $soma += $cpf[0] * 11;
@@ -140,6 +142,7 @@
                         if (!preg_match('/^[a-zA-Z0-9._%+-]+@(gmail|hotmail|outlook|yahoo)\.com$/', $email)) return "E-mail inválido.";
                         return null;
                     }
+
                     function validarCelular($celular) {
                         if (empty($celular)) return "O campo celular é obrigatório.";
                         if (!preg_match('/\(\+\d{2}\)\(\d{2}\)\d{5}-\d{4}$/', $celular)) return "O número de celular não está em um formato válido. Use o formato (+xx)(xx)xxxxx-xxxx.";
