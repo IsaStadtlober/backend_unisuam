@@ -403,13 +403,13 @@
                 <section class="row">
                     <div class="col-md-6 mb-3">
                         <label for="senha" class="form-label">Insira uma senha:</label>
-                        <p class="form-text">Máximo de 8 caracteres alfabéticos.</p>
+                        <p class="form-text">Mínimo de 8 caracteres alfabéticos.</p>
                         <input type="password" id="senha" name="senha" class="form-control" value="<?php echo htmlspecialchars($dados['senha'] ?? '') ?>" placeholder="Digite sua senha" required>
                         <p style="color: red;"><?php echo $erros["senha"] ?? ""; ?></p>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="confirmar_senha" class="form-label">Confirmar senha:</label>
-                        <p class="form-text">Máximo de 8 caracteres alfabéticos.</p>
+                        <p class="form-text">Mínimo de 8 caracteres alfabéticos.</p>
                         <input type="password" id="confirmar_senha" name="confirmar_senha" class="form-control" value="<?php echo htmlspecialchars($dados['confirmar_senha'] ?? '') ?>" placeholder="Confirme sua senha" required>
                         <p style="color: red;"><?php echo $erros["confirmar_senha"] ?? ""; ?></p>
                     </div>
@@ -569,6 +569,33 @@
                 }
             }, 100); // Aguarda 500ms antes de fazer a requisição para evitar chamadas excessivas
         }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Máscara para Telefone Fixo: (+xx)(xx)xxxx-xxxx
+            const telefoneFixoInput = document.getElementById("telefone_fixo");
+            IMask(telefoneFixoInput, {
+                mask: "(+00)(00)0000-0000",
+            });
+
+            // Máscara para Telefone Celular: (+xx)(xx)xxxxx-xxxx
+            const telefoneCelularInput = document.getElementById("telefone_celular");
+            IMask(telefoneCelularInput, {
+                mask: "(+00)(00)00000-0000",
+            });
+
+            // Máscara para CPF: xxx.xxx.xxx-xx
+            const cpfInput = document.getElementById("cpf");
+            IMask(cpfInput, {
+                mask: "000.000.000-00",
+            });
+
+            // Máscara para CEP: xxxxx-xxx
+            const cepInput = document.getElementById("cep");
+            IMask(cepInput, {
+                mask: "00000-000",
+            });
+            });
     </script>
     <script src="https://unpkg.com/imask"></script>
     <script src="js/mascara.js"></script>      
