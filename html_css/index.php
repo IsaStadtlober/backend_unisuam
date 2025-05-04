@@ -270,24 +270,89 @@
               <p class="text-center fs-6">Complete com os seus dados para efetuar o login.</p>
               <div class="modal-body">
                   <!-- Formulário de Login -->
-                  <form action="processar_login.php" method="POST" id="login-form">
+                  <?php 
+                    $erro = [];
+                    $dados = [];
+
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                      $dados = [
+                        "email" => $_POST["email"],
+                        "password" => $_POST["password"],
+                        "confirm_password" => $_POST["confirm_password"]
+                      ];
+                      function email($email) {
+                        if ($email != "emailficticostarplay@gmail.com") {
+                          return "Esse e-mail não está cadastrado";
+                        }
+                        return null; 
+                      }
+                      function senha($password) {
+                        if ($password != "abcdefgh") {
+                            return "Senha incorreta";
+                        }
+                        return null;
+                      }
+                    
+                      function confirmarSenha($password, $confirm_password) {
+                          if ($confirm_password != $password) {
+                              return "As senhas não são iguais";
+                          }
+                          return null;
+                      }
+
+                      $erro["email"] = email($dados["email"]);
+                      $erro["password"] = senha($dados["password"]);
+                      $erro["confirm_password"] = confirmarSenha($dados["password"], $dados["confirm_password"]);
+
+
+                      if (!empty(array_filter($erro))) {
+                        // Reabre o modal se houver erros
+                        echo "
+                        <script>
+                          document.addEventListener('DOMContentLoaded', function () {
+                            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                            loginModal.show();
+                          });
+                        </script>";
+                      }
+                      else {
+                        // Exibe o modal de sucesso
+                        echo "
+                        <script>
+                          document.addEventListener('DOMContentLoaded', function () {
+                            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                            successModal.show();
+                    
+                            // Redireciona após 3 segundos
+                            setTimeout(function () {
+                              window.location.href = 'index.php';
+                            }, 3000);
+                          });
+                        </script>";
+                      }
+                    }
+                   ?>
+                  <form action="" method="POST" id="login-form">
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                        <input type="email" id="email" name="email" class="form-control" value="<?php echo htmlspecialchars($dados["email"] ?? '')?>" placeholder="Digite seu e-mail" required>
+                        <p style="color: red;"><?php echo $erro["email"] ?? ""; ?></p>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha:</label>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required>
+                        <input type="password" id="password" name="password" class="form-control" value="<?php echo htmlspecialchars($dados["password"] ?? '') ?>" placeholder="Digite sua senha" required>
+                        <p style="color: red;"><?php echo $erro["password"] ?? ""; ?></p>
                     </div>
                     <div class="mb-3">
                         <label for="confirm-password" class="form-label">Confirmar Senha:</label>
-                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirme sua senha" required>
+                        <input type="password" id="confirm_password" name="confirm_password" class="form-control" value="<?php echo htmlspecialchars($dados['confirm_password'] ?? '') ?>" placeholder="Confirme sua senha" required>
+                        <p style="color: red;"><?php echo $erro["confirm_password"] ?? ""; ?></p>
                     </div>
                     <div class="form-actions mt-4 d-flex justify-content-between">
                         <button type="reset" class="btn btn-outline-secondary w-50"style="margin-right: 20px;">Limpar</button>
                         <button type="submit" class="btn btn-outline-primary w-50" id="login-submit">
                           Entrar
-                      </button>
+                        </button>
                     </div>
                 </form>
               </div>
@@ -299,22 +364,22 @@
       </div>
     </div>
 
-    <!-- Modal 2: Segundo Fator de Autenticação -->
+    <!--
     <div class="modal fade" id="secondFactorModal" tabindex="-1" aria-labelledby="secondFactorModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content p-4 py-1">
-          <!-- Botão de Fechar no canto superior direito -->
+          
           <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
-          <!-- Imagem e texto no topo do modal -->
+          
           <div class="d-flex align-items-center justify-content-center mt-3 mb-3">
             <img src="img/logo-pp2.png" alt="Logo Startplay" style="max-width: 40px; margin-right: 10px;">
             <h1 class="fs-5 mb-0">StartPlay</h1>
           </div>
-          <!-- Título do modal -->
+          
           <h2 class="modal-title fs-3 text-center mt-3" id="secondFactorModalLabel">Segundo Fator de <br> Autenticação</h2>
           <p class="text-center fs-6 mb-3">Responda à pergunta de segurança para continuar.</p>
           <div class="modal-body">
-            <!-- Pergunta de Segurança -->
+            
             <form action="processar_2fa.php" method="POST" id="second-factor-form">
               <div class="mb-3">
                 <label for="security-answer" class="form-label">Qual o nome da sua mãe?</label>
@@ -327,29 +392,53 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <!-- Modal de Login Efetuado -->
+      <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content p-4 py-1">
+            <!-- Botão de Fechar no canto superior direito -->
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            <!-- Conteúdo do Modal -->
+            <div class="modal-body text-center">
+              <img src="img/favicon.ico" alt="Ícone de Sucesso" style="max-width: 40px; margin-bottom: 20px;">
+              <h2 class="modal-title fs-3 text-success" id="successModalLabel">Login Efetuado com Sucesso!</h2>
+              <p class="fs-6 mt-3">Bem-vindo(a) de volta! Você será redirecionado em breve.</p>
+              <div class="d-flex justify-content-center mt-4">
+                <button type="button" class="btn btn-outline-success w-50" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const loginForm = document.getElementById("login-form");
-        const loginSubmitButton = document.getElementById("login-submit");
         const secondFactorModal = new bootstrap.Modal(document.getElementById("secondFactorModal"));
-    
+
         // Intercepta o envio do formulário de login
         loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-    
-          // Simula o envio do formulário (aqui você pode adicionar lógica de validação ou envio para o servidor)
-          console.log("Formulário de login enviado!");
-    
-          // Fecha o modal de login
-          const loginModal = bootstrap.Modal.getInstance(document.getElementById("loginModal"));
-          loginModal.hide();
-    
-          // Abre o modal de segundo fator de autenticação
-          secondFactorModal.show();
+          event.preventDefault(); // Impede o envio padrão do formulário
+
+          // Coleta os dados do formulário
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword = document.getElementById("confirm_password").value;
+
+          // Simula a validação do formulário
+          if (email === "emailficticostarplay@gmail.com" && password === "abcdfghi" && password === confirmPassword) {
+            console.log("Validação bem-sucedida!");
+
+            // Abre o modal de segundo fator de autenticação
+            secondFactorModal.show();
+          } else {
+            console.log("Erro na validação. Verifique os dados.");
+            alert("Erro na validação. Verifique os dados.");
+          }
         });
       });
     </script>
