@@ -96,6 +96,9 @@
                         if (!preg_match('/^(?:[0-9]{3}\.){2}(?:[0-9]{3}\-)(?:[0-9]{2})$/', $cpf)){
                             return "CPF inválido. Utilize o formato de digitação xxx.xxx.xxx-xx";
                         }
+                        if ($cpf == "000.000.000-00" || $cpf == "111.111.111-11" || $cpf == "222.222.222-22" || $cpf == "333.333.333-33" || $cpf == "444.444.444-44" || $cpf == "555.555.555-55" || $cpf == "666.666.666-66" || $cpf == "777.777.777-77" || $cpf == "888.888.888-88" || $cpf == "999.999.999-99") {
+                            return "CPF inválido, CPF com números repetidos.";
+                        }
                         $cpf = preg_replace('/[\.\-]/', '', $cpf);
                     
                         //Primeiro dígito verificador
@@ -417,8 +420,8 @@
 
                 <!-- Botões -->
                 <footer class="form-actions mt-4">
-                    <button type="reset" class="btn btn-outline-secondary w-100 mt-2">Limpar</button>
-                    <button type="submit" class="btn btn-outline-primary w-100 mt-2">Enviar</button>
+                    <input type="reset" class="btn btn-outline-secondary w-100 mt-2" name="limpar" value="Limpar">
+                    <input type="submit" class="btn btn-outline-primary w-100 mt-2"name="cadastrar" value = "Enviar">
                 </footer>
             </form>
         </section>
@@ -499,6 +502,23 @@
                 mask: "00000-000",
             });
             });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const limparBtn = document.querySelector('input[name="limpar"]');
+            const form = document.getElementById("cadastro-form");
+
+            limparBtn.addEventListener("click", function (event) {
+                event.preventDefault(); // Evita o comportamento padrão do botão
+
+                // Limpa os valores dos campos do formulário
+                form.querySelectorAll("input, select").forEach((campo) => {
+                    if (campo.type !== "submit" && campo.type !== "reset") {
+                        campo.value = ""; // Limpa o valor do campo
+                    }
+                });
+            });
+        });
     </script>
     <script src="https://unpkg.com/imask"></script>
     <script src="js/mascara.js"></script>      
