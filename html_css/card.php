@@ -515,7 +515,7 @@
             <!-- Conteúdo do Modal -->
             <div class="modal-body text-center">
               <img src="img/favicon.ico" alt="Ícone de Sucesso" style="max-width: 40px; margin-bottom: 20px;">
-              <h2 class="modal-title fs-3 text-success" id="successModalLabel">Login Efetuado com Sucesso!</h2>
+              <h2 class="modal-title fs-3 text-success" id="successModalLabel">Login efetuado com sucesso!</h2>
               <p class="fs-6 mt-3">Bem-vindo(a) de volta! Você será redirecionado em breve.</p>
               <div class="d-flex justify-content-center mt-4">
                 <button type="button" class="btn btn-outline-success w-50" data-bs-dismiss="modal">Fechar</button>
