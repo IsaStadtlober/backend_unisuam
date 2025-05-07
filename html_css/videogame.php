@@ -82,7 +82,7 @@
             </div>
 
             <!-- Quinto -->
-             <h1 class="polystation">POLYSTATION</h1>
+             <h1 class="polystation">POLSTATION</h1>
              <p>Em 1994, o PolyStation revolucionou a quinta geração com jogos 3D imersivos e gráficos poligonais. Títulos como "Poly Racer 3D", "Adventure Quest 3D" e "Space Combat 3D" mostraram o potencial da nova tecnologia. O PolyStation, da "PolyTech", definiu um novo padrão para os jogos domésticos, marcando o início da era 3D.</p>
              <div class="container5">
                 <img src="img/1742321026536-removebg-preview.png" alt="Polystation">
@@ -93,7 +93,7 @@
             </div>
 
             <!-- Sexto -->
-             <h1 class="polystation">POLYSTATION 2</h1>
+             <h1 class="polystation">POLSTATION 2</h1>
              <p>Em 2000, o PolyStation 2 elevou a experiência de jogo na sexta geração com gráficos 3D detalhados e mundos expansivos. Jogos como "Urban Legands in San andreas", "Space Combat: Next Gen" e "Racing Legends 2" demonstraram o poder do novo hardware. O PolyStation 2, da "PolyTech", consolidou a era 3D, oferecendo uma vasta biblioteca de jogos e entretenimento multimídia.</p>
              <div class="container6">
                 <img src="img/Adobe_Express_-_file__5_-removebg-preview.png" alt="polystation2">
@@ -116,7 +116,7 @@
             </div>
 
             <!-- Oitavo -->   
-             <h1 class="polystation">POLYSTATION 4</h1>
+             <h1 class="polystation">POLSTATION 4</h1>
              <p>Em 2013, o PolyStation 4, da PolyTech, chegou à oitava geração com gráficos de alta definição. Títulos como "Poly Adventures 4", "Space Combat: Reborn" e "Urban Legends 5" ofereceram mundos imersivos. A vasta biblioteca de jogos e as experiências online definiram um novo padrão. O PolyStation 4 consolidou a PolyTech como líder no entretenimento doméstico.</p>
              <div class="container8">
                 <img src="img/polystation4.png" alt="polystation4">
@@ -138,7 +138,7 @@
                 <p>2017</p> <!-- Alterar para o novo ano -->
              </div>
              <!-- Décimo -->
-              <h1 class="polystation">POLYSTATION 5</h1>
+              <h1 class="polystation">POLSTATION 5</h1>
               <p>Em 2020, o PolyStation 5 inaugurou a nona geração com gráficos de última geração e carregamento ultrarrápido. A PolyTech destacou-se com jogos como "Poly Adventures 5" e "Urban Legends: Next Chapter". O foco em jogos exclusivos e tecnologia de ponta definiu um novo padrão para o entretenimento doméstico.</p>
               <div class="container10">
                 <img src="img/polystation5.png" alt="Polystation5">
@@ -150,13 +150,13 @@
 
              <!-- Final -->
               <h1 class="cons_final">CONSIDERAÇÕES FINAIS</h1>
-              <p class="par_final">A história dos videogames é marcada por uma evolução constante, impulsionada por inovação e paixão. Desde o Magnavox Odyssey, em 1972, até os consoles atuais como PlayStation 5 e Xbox Series X/S, a indústria transformou o entretenimento digital.</p>
+              <p class="par_final">A história dos videogames é marcada por uma evolução constante, impulsionada por inovação e paixão. Desde o Magnavox Odyssey, em 1972, até os consoles atuais como Polstation 5 e X-game Series X/S, a indústria transformou o entretenimento digital.</p>
 
-              <p class="par_final">Cada console significativo trouxe algo novo. O Atari 2600 popularizou os cartuchos, o NES salvou a indústria em 1983, o PlayStation introduziu jogos em CD e o Wii inovou com controles de movimento.</p>
+              <p class="par_final">Cada console significativo trouxe algo novo. O Atar 2600 popularizou os cartuchos, o NES salvou a indústria em 1983, o Polstation introduziu jogos em CD e inovou com controles de movimento.</p>
                
-              <p class="par_final">Alguns consoles se destacaram por recordes de venda e impacto cultural. O PlayStation 2 é o mais vendido, com mais de 155 milhões de unidades. O Nintendo Switch, com seu design híbrido, atraiu fãs globalmente.</p>
+              <p class="par_final">Alguns consoles se destacaram por recordes de venda e impacto cultural. O PlayStation 2 é o mais vendido, com mais de 155 milhões de unidades. O Nentendo, com seu design híbrido, atraiu fãs globalmente.</p>
                
-              <p class="par_final">Esta é uma amostra dos consoles importantes. Muitos outros, como Sega Mega Drive, Nintendo 64 e Xbox 360, também contribuíram para a evolução dos videogames.</p>   
+              <p class="par_final">Esta é uma amostra dos consoles importantes. Muitos outros, como Soga Miga Drove, Netendo 64 e X-game 370, também contribuíram para a evolução dos videogames.</p>   
         </article>
 
         <footer class="footer-index">
