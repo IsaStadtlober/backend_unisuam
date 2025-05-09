@@ -442,5 +442,32 @@
         });
       });
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.getElementById("login-form");
+        const limparBtn = document.querySelector('button[type="reset"]'); // Seleciona o botão de reset
+
+        // Adiciona funcionalidade ao botão de limpar
+        limparBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Impede o comportamento padrão do botão
+
+          // Redefine os campos do formulário
+          loginForm.reset();
+
+          // Remove as mensagens de erro, se existirem
+          const errorMessages = document.querySelectorAll("p[style='color: red;']");
+          errorMessages.forEach((message) => {
+            message.textContent = ""; // Limpa o texto das mensagens de erro
+          });
+
+          // Opcional: Remove os valores dos campos preenchidos dinamicamente pelo PHP
+          const inputs = loginForm.querySelectorAll("input");
+          inputs.forEach((input) => {
+            input.value = ""; // Limpa os valores dos campos
+        });
+      });
+    });
+    </script>
 </body>
 </html>
