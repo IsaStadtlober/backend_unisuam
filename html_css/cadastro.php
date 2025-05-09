@@ -116,7 +116,6 @@
                         if ($soma == 10 || $soma == 11) {
                             $soma = 0;
                         }
-                        
                         if ($soma != $cpf[9]) {
                             return "CPF inválido, de acordo com o Primeiro dígito verificador";
                         }
