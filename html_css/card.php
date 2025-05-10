@@ -323,7 +323,7 @@
                     <h3>Requisitos mínimos (PC):</h3>
                     <p><strong>Sistema Operacional:</strong> Windows XP ou superior ou Emulador compatível.</p>
                     <p><strong>Processador:</strong> Pentium III 800MHz ou equivalente.</p>
-                    <p><strong>Memória:</strong> 128 GB RAM.</p>
+                    <p><strong>Memória:</strong> 128 MB RAM.</p>
                     <p><strong>Placa de vídeo:</strong> Qualquer placa com suporte a <br>DirectX 7.0.</p>
                     <p><strong>Armazenamento:</strong> 50 MB de espaço livre.</p>
                 </section>
@@ -331,7 +331,7 @@
                     <h3>Requisitos recomendados (PC):</h3>
                     <p><strong>Sistema Operacional:</strong> Windows 7 ou superior ou Emulador compatível.</p>
                     <p><strong>Processador:</strong> Pentium 4 1.5GHz ou equivalente.</p>
-                    <p><strong>Memória:</strong> 256 GB RAM.</p>
+                    <p><strong>Memória:</strong> 256 MB RAM.</p>
                     <p><strong>Placa de vídeo:</strong> Qualquer placa com suporte a <br>DirectX 9.0.</p>
                     <p><strong>Armazenamento:</strong> 250 MB de espaço livre.</p>
                 </section>

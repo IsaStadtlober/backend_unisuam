@@ -139,7 +139,7 @@
              </div>
              <!-- Décimo -->
               <h1 class="polystation">POLSTATION 5</h1>
-              <p>Em 2020, o PolStation 5 inaugurou a nona geração com gráficos de última geração e carregamento ultrarrápido. A PolyTech destacou-se com jogos como "Poly Adventures 5" e "Urban Legends: Next Chapter". O foco em jogos exclusivos e tecnologia de ponta definiu um novo padrão para o entretenimento doméstico.</p>
+              <p>Em 2020, o PolStation 5 inaugurou a nona geração com gráficos de última geração e carregamento ultrarrápido. A PolTech destacou-se com jogos como "Poly Adventures 5" e "Urban Legends: Next Chapter". O foco em jogos exclusivos e tecnologia de ponta definiu um novo padrão para o entretenimento doméstico.</p>
               <div class="container10">
                 <img src="img/polystation5.png" alt="Polystation5">
              </div>
